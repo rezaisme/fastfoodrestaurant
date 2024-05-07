@@ -42,39 +42,26 @@
         <script src="js/tailDT.js"></script>
 <script src="js/nouislider.min.js"></script>
 <script src="js/wNumb.js"></script>
-        <script src="data/CompetitorsNational_1.js"></script>
-        <script src="data/TangerangMap_2.js"></script>
-        <script src="data/Tangerang_Competitors_3.js"></script>
-        <script src="data/TangselMap_4.js"></script>
-        <script src="data/TangerangSelatan_Competitors_5.js"></script>
-        <script src="data/TangerangRegencyMap_6.js"></script>
-        <script src="data/KabTangerang_Competitors_7.js"></script>
-        <script src="data/BekasiRegencyMap_8.js"></script>
-        <script src="data/KabBekasi_Competitors_9.js"></script>
-        <script src="data/BekasiMap_10.js"></script>
-        <script src="data/Bekasi_Competitors_11.js"></script>
-        <script src="data/BogorMap_12.js"></script>
-        <script src="data/Bogor_Competitors_13.js"></script>
-        <script src="data/BogorRegency_14.js"></script>
-        <script src="data/KabBogor_Competitors_15.js"></script>
-        <script src="data/Depok_16.js"></script>
-        <script src="data/Depok_Competitors_17.js"></script>
-        <script src="data/NorthJakarta_18.js"></script>
-        <script src="data/NorthJakarta_Competitors_19.js"></script>
-        <script src="data/WestJakarta_20.js"></script>
-        <script src="data/WestJakarta_Competitors_21.js"></script>
-        <script src="data/EastJakarta_22.js"></script>
-        <script src="data/EastJakarta_Competitors_23.js"></script>
-        <script src="data/CentralJakarta_24.js"></script>
-        <script src="data/CentralJakarta_Competitors_25.js"></script>
-        <script src="data/SouthJakarta_26.js"></script>
-        <script src="data/SouthJakarta_Competitors_27.js"></script>
+        <script src="data/TangerangMap_1.js"></script>
+        <script src="data/TangselMap_2.js"></script>
+        <script src="data/TangerangRegencyMap_3.js"></script>
+        <script src="data/BekasiRegencyMap_4.js"></script>
+        <script src="data/BekasiMap_5.js"></script>
+        <script src="data/BogorMap_6.js"></script>
+        <script src="data/BogorRegency_7.js"></script>
+        <script src="data/Depok_8.js"></script>
+        <script src="data/NorthJakarta_9.js"></script>
+        <script src="data/WestJakarta_10.js"></script>
+        <script src="data/EastJakarta_11.js"></script>
+        <script src="data/CentralJakarta_12.js"></script>
+        <script src="data/SouthJakarta_13.js"></script>
+        <script src="data/JoinedlayerGreaterJakartaOnlyarewithin_final_14.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[-6.810270306549937,106.2579709611868],[-5.896672591449972,107.37793183781332]]);
+        }).fitBounds([[-6.849579118568109,106.095842365534],[-5.9359814034681415,107.70423062446707]]);
         var hash = new L.Hash(map);
-        map.attributionControl.setPrefix('<a href=>rezaisme/mi/sbd</a> &middot;<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
         function removeEmptyRowsFromPopupContent(content, feature) {
          var tempDiv = document.createElement('div');
@@ -114,181 +101,7 @@
         });
         layer_GoogleMaps_0;
         map.addLayer(layer_GoogleMaps_0);
-        function pop_CompetitorsNational_1(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">Store</th>\
-                        <td class="visible-with-data" id="Store">' + (feature.properties['Store'] !== null ? autolinker.link(feature.properties['Store'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Grup</th>\
-                        <td class="visible-with-data" id="Grup">' + (feature.properties['Grup'] !== null ? autolinker.link(feature.properties['Grup'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Address.1</th>\
-                        <td class="visible-with-data" id="Address.1">' + (feature.properties['Address.1'] !== null ? autolinker.link(feature.properties['Address.1'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-            var popup = layer.getPopup();
-            var content = popup.getContent();
-            var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
-            popup.setContent(updatedContent);
-        }
-
-        function style_CompetitorsNational_1_0(feature) {
-            switch(String(feature.properties['Grup.BU'])) {
-                case 'A&W':
-                    return {
-                pane: 'pane_CompetitorsNational_1',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(89,63,231,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'BK':
-                    return {
-                pane: 'pane_CompetitorsNational_1',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(28,218,155,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'KFC':
-                    return {
-                pane: 'pane_CompetitorsNational_1',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(186,64,200,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'McD':
-                    return {
-                pane: 'pane_CompetitorsNational_1',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(198,216,106,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'PH Restaurant':
-                    return {
-                pane: 'pane_CompetitorsNational_1',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(120,226,110,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'PHD':
-                    return {
-                pane: 'pane_CompetitorsNational_1',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(240,102,148,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'Starbucks':
-                    return {
-                pane: 'pane_CompetitorsNational_1',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(204,115,52,1.0)',
-                interactive: true,
-            }
-                    break;
-                default:
-                    return {
-                pane: 'pane_CompetitorsNational_1',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(61,162,235,1.0)',
-                interactive: true,
-            }
-                    break;
-            }
-        }
-        map.createPane('pane_CompetitorsNational_1');
-        map.getPane('pane_CompetitorsNational_1').style.zIndex = 401;
-        map.getPane('pane_CompetitorsNational_1').style['mix-blend-mode'] = 'normal';
-        var layer_CompetitorsNational_1 = new L.geoJson(json_CompetitorsNational_1, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_CompetitorsNational_1',
-            layerName: 'layer_CompetitorsNational_1',
-            pane: 'pane_CompetitorsNational_1',
-            onEachFeature: pop_CompetitorsNational_1,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_CompetitorsNational_1_0(feature));
-            },
-        });
-        bounds_group.addLayer(layer_CompetitorsNational_1);
-        map.addLayer(layer_CompetitorsNational_1);
-        function pop_TangerangMap_2(feature, layer) {
+        function pop_TangerangMap_1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['OBJECTID'] !== null ? autolinker.link(feature.properties['OBJECTID'].toLocaleString()) : '') + '</td>\
@@ -379,9 +192,9 @@
             popup.setContent(updatedContent);
         }
 
-        function style_TangerangMap_2_0() {
+        function style_TangerangMap_1_0() {
             return {
-                pane: 'pane_TangerangMap_2',
+                pane: 'pane_TangerangMap_1',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -390,205 +203,32 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(224,224,224,1.0)',
+                fillColor: 'rgba(224,224,224,0.5019607843137255)',
                 interactive: true,
             }
         }
-        map.createPane('pane_TangerangMap_2');
-        map.getPane('pane_TangerangMap_2').style.zIndex = 402;
-        map.getPane('pane_TangerangMap_2').style['mix-blend-mode'] = 'normal';
-        var layer_TangerangMap_2 = new L.geoJson(json_TangerangMap_2, {
+        map.createPane('pane_TangerangMap_1');
+        map.getPane('pane_TangerangMap_1').style.zIndex = 401;
+        map.getPane('pane_TangerangMap_1').style['mix-blend-mode'] = 'normal';
+        var layer_TangerangMap_1 = new L.geoJson(json_TangerangMap_1, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_TangerangMap_2',
-            layerName: 'layer_TangerangMap_2',
-            pane: 'pane_TangerangMap_2',
-            onEachFeature: pop_TangerangMap_2,
-            style: style_TangerangMap_2_0,
+            dataVar: 'json_TangerangMap_1',
+            layerName: 'layer_TangerangMap_1',
+            pane: 'pane_TangerangMap_1',
+            onEachFeature: pop_TangerangMap_1,
+            style: style_TangerangMap_1_0,
         });
-        bounds_group.addLayer(layer_TangerangMap_2);
-        map.addLayer(layer_TangerangMap_2);
-        function pop_Tangerang_Competitors_3(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">Store</th>\
-                        <td class="visible-with-data" id="Store">' + (feature.properties['Store'] !== null ? autolinker.link(feature.properties['Store'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Grup</th>\
-                        <td class="visible-with-data" id="Grup">' + (feature.properties['Grup'] !== null ? autolinker.link(feature.properties['Grup'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Address.1</th>\
-                        <td class="visible-with-data" id="Address.1">' + (feature.properties['Address.1'] !== null ? autolinker.link(feature.properties['Address.1'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-            var popup = layer.getPopup();
-            var content = popup.getContent();
-            var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
-            popup.setContent(updatedContent);
-        }
-
-        function style_Tangerang_Competitors_3_0(feature) {
-            switch(String(feature.properties['Grup.BU'])) {
-                case 'A&W':
-                    return {
-                pane: 'pane_Tangerang_Competitors_3',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(89,63,231,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'BK':
-                    return {
-                pane: 'pane_Tangerang_Competitors_3',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(28,218,155,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'KFC':
-                    return {
-                pane: 'pane_Tangerang_Competitors_3',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(186,64,200,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'McD':
-                    return {
-                pane: 'pane_Tangerang_Competitors_3',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(198,216,106,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'PH Restaurant':
-                    return {
-                pane: 'pane_Tangerang_Competitors_3',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(120,226,110,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'PHD':
-                    return {
-                pane: 'pane_Tangerang_Competitors_3',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(240,102,148,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'Starbucks':
-                    return {
-                pane: 'pane_Tangerang_Competitors_3',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(204,115,52,1.0)',
-                interactive: true,
-            }
-                    break;
-                default:
-                    return {
-                pane: 'pane_Tangerang_Competitors_3',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(61,162,235,1.0)',
-                interactive: true,
-            }
-                    break;
-            }
-        }
-        map.createPane('pane_Tangerang_Competitors_3');
-        map.getPane('pane_Tangerang_Competitors_3').style.zIndex = 403;
-        map.getPane('pane_Tangerang_Competitors_3').style['mix-blend-mode'] = 'normal';
-        var layer_Tangerang_Competitors_3 = new L.geoJson(json_Tangerang_Competitors_3, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_Tangerang_Competitors_3',
-            layerName: 'layer_Tangerang_Competitors_3',
-            pane: 'pane_Tangerang_Competitors_3',
-            onEachFeature: pop_Tangerang_Competitors_3,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_Tangerang_Competitors_3_0(feature));
-            },
-        });
-        bounds_group.addLayer(layer_Tangerang_Competitors_3);
-        map.addLayer(layer_Tangerang_Competitors_3);
-        function pop_TangselMap_4(feature, layer) {
+        bounds_group.addLayer(layer_TangerangMap_1);
+        map.addLayer(layer_TangerangMap_1);
+        function pop_TangselMap_2(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['OBJECTID'] !== null ? autolinker.link(feature.properties['OBJECTID'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['KDPPUM'] !== null ? autolinker.link(feature.properties['KDPPUM'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">KDPPUM</th>\
+                        <td>' + (feature.properties['KDPPUM'] !== null ? autolinker.link(feature.properties['KDPPUM'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['NAMOBJ'] !== null ? autolinker.link(feature.properties['NAMOBJ'].toLocaleString()) : '') + '</td>\
@@ -679,10 +319,10 @@
             popup.setContent(updatedContent);
         }
 
-        function style_TangselMap_4_0(feature) {
+        function style_TangselMap_2_0(feature) {
             if (feature.properties['Batas Wilayah Edit_Populasi'] >= 7777.000000 && feature.properties['Batas Wilayah Edit_Populasi'] <= 15387.000000 ) {
                 return {
-                pane: 'pane_TangselMap_4',
+                pane: 'pane_TangselMap_2',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -691,13 +331,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(250,250,250,0.8509803921568627)',
+                fillColor: 'rgba(250,250,250,0.5019607843137255)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Wilayah Edit_Populasi'] >= 15387.000000 && feature.properties['Batas Wilayah Edit_Populasi'] <= 23547.000000 ) {
                 return {
-                pane: 'pane_TangselMap_4',
+                pane: 'pane_TangselMap_2',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -706,13 +346,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(224,223,223,0.8901960784313725)',
+                fillColor: 'rgba(224,223,223,0.6274509803921569)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Wilayah Edit_Populasi'] >= 23547.000000 && feature.properties['Batas Wilayah Edit_Populasi'] <= 31987.000000 ) {
                 return {
-                pane: 'pane_TangselMap_4',
+                pane: 'pane_TangselMap_2',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -721,13 +361,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,196,196,0.9254901960784314)',
+                fillColor: 'rgba(197,196,196,0.7529411764705882)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Wilayah Edit_Populasi'] >= 31987.000000 && feature.properties['Batas Wilayah Edit_Populasi'] <= 42996.000000 ) {
                 return {
-                pane: 'pane_TangselMap_4',
+                pane: 'pane_TangselMap_2',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -736,13 +376,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(171,170,170,0.9647058823529412)',
+                fillColor: 'rgba(171,170,170,0.8745098039215686)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Wilayah Edit_Populasi'] >= 42996.000000 && feature.properties['Batas Wilayah Edit_Populasi'] <= 52694.000000 ) {
                 return {
-                pane: 'pane_TangselMap_4',
+                pane: 'pane_TangselMap_2',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -756,195 +396,21 @@
             }
             }
         }
-        map.createPane('pane_TangselMap_4');
-        map.getPane('pane_TangselMap_4').style.zIndex = 404;
-        map.getPane('pane_TangselMap_4').style['mix-blend-mode'] = 'normal';
-        var layer_TangselMap_4 = new L.geoJson(json_TangselMap_4, {
+        map.createPane('pane_TangselMap_2');
+        map.getPane('pane_TangselMap_2').style.zIndex = 402;
+        map.getPane('pane_TangselMap_2').style['mix-blend-mode'] = 'normal';
+        var layer_TangselMap_2 = new L.geoJson(json_TangselMap_2, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_TangselMap_4',
-            layerName: 'layer_TangselMap_4',
-            pane: 'pane_TangselMap_4',
-            onEachFeature: pop_TangselMap_4,
-            style: style_TangselMap_4_0,
+            dataVar: 'json_TangselMap_2',
+            layerName: 'layer_TangselMap_2',
+            pane: 'pane_TangselMap_2',
+            onEachFeature: pop_TangselMap_2,
+            style: style_TangselMap_2_0,
         });
-        bounds_group.addLayer(layer_TangselMap_4);
-        map.addLayer(layer_TangselMap_4);
-        function pop_TangerangSelatan_Competitors_5(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">Store</th>\
-                        <td class="visible-with-data" id="Store">' + (feature.properties['Store'] !== null ? autolinker.link(feature.properties['Store'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Grup</th>\
-                        <td class="visible-with-data" id="Grup">' + (feature.properties['Grup'] !== null ? autolinker.link(feature.properties['Grup'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Address.1</th>\
-                        <td class="visible-with-data" id="Address.1">' + (feature.properties['Address.1'] !== null ? autolinker.link(feature.properties['Address.1'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-            var popup = layer.getPopup();
-            var content = popup.getContent();
-            var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
-            popup.setContent(updatedContent);
-        }
-
-        function style_TangerangSelatan_Competitors_5_0(feature) {
-            switch(String(feature.properties['Grup.BU'])) {
-                case 'A&W':
-                    return {
-                pane: 'pane_TangerangSelatan_Competitors_5',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(89,63,231,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'BK':
-                    return {
-                pane: 'pane_TangerangSelatan_Competitors_5',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(28,218,155,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'KFC':
-                    return {
-                pane: 'pane_TangerangSelatan_Competitors_5',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(186,64,200,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'McD':
-                    return {
-                pane: 'pane_TangerangSelatan_Competitors_5',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(198,216,106,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'PH Restaurant':
-                    return {
-                pane: 'pane_TangerangSelatan_Competitors_5',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(120,226,110,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'PHD':
-                    return {
-                pane: 'pane_TangerangSelatan_Competitors_5',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(240,102,148,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'Starbucks':
-                    return {
-                pane: 'pane_TangerangSelatan_Competitors_5',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(204,115,52,1.0)',
-                interactive: true,
-            }
-                    break;
-                default:
-                    return {
-                pane: 'pane_TangerangSelatan_Competitors_5',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(61,162,235,1.0)',
-                interactive: true,
-            }
-                    break;
-            }
-        }
-        map.createPane('pane_TangerangSelatan_Competitors_5');
-        map.getPane('pane_TangerangSelatan_Competitors_5').style.zIndex = 405;
-        map.getPane('pane_TangerangSelatan_Competitors_5').style['mix-blend-mode'] = 'normal';
-        var layer_TangerangSelatan_Competitors_5 = new L.geoJson(json_TangerangSelatan_Competitors_5, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_TangerangSelatan_Competitors_5',
-            layerName: 'layer_TangerangSelatan_Competitors_5',
-            pane: 'pane_TangerangSelatan_Competitors_5',
-            onEachFeature: pop_TangerangSelatan_Competitors_5,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_TangerangSelatan_Competitors_5_0(feature));
-            },
-        });
-        bounds_group.addLayer(layer_TangerangSelatan_Competitors_5);
-        map.addLayer(layer_TangerangSelatan_Competitors_5);
-        function pop_TangerangRegencyMap_6(feature, layer) {
+        bounds_group.addLayer(layer_TangselMap_2);
+        map.addLayer(layer_TangselMap_2);
+        function pop_TangerangRegencyMap_3(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['OBJECTID'] !== null ? autolinker.link(feature.properties['OBJECTID'].toLocaleString()) : '') + '</td>\
@@ -1041,10 +507,10 @@
             popup.setContent(updatedContent);
         }
 
-        function style_TangerangRegencyMap_6_0(feature) {
+        function style_TangerangRegencyMap_3_0(feature) {
             if (feature.properties['Batas Wilayah Edit_Populasi'] >= 0.000000 && feature.properties['Batas Wilayah Edit_Populasi'] <= 3700.000000 ) {
                 return {
-                pane: 'pane_TangerangRegencyMap_6',
+                pane: 'pane_TangerangRegencyMap_3',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -1053,13 +519,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(250,250,250,0.8509803921568627)',
+                fillColor: 'rgba(250,250,250,0.5019607843137255)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Wilayah Edit_Populasi'] >= 3700.000000 && feature.properties['Batas Wilayah Edit_Populasi'] <= 10804.000000 ) {
                 return {
-                pane: 'pane_TangerangRegencyMap_6',
+                pane: 'pane_TangerangRegencyMap_3',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -1068,13 +534,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(224,223,223,0.8901960784313725)',
+                fillColor: 'rgba(224,223,223,0.6274509803921569)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Wilayah Edit_Populasi'] >= 10804.000000 && feature.properties['Batas Wilayah Edit_Populasi'] <= 20148.000000 ) {
                 return {
-                pane: 'pane_TangerangRegencyMap_6',
+                pane: 'pane_TangerangRegencyMap_3',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -1083,13 +549,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,196,196,0.9254901960784314)',
+                fillColor: 'rgba(197,196,196,0.7529411764705882)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Wilayah Edit_Populasi'] >= 20148.000000 && feature.properties['Batas Wilayah Edit_Populasi'] <= 35455.000000 ) {
                 return {
-                pane: 'pane_TangerangRegencyMap_6',
+                pane: 'pane_TangerangRegencyMap_3',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -1098,13 +564,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(171,170,170,0.9647058823529412)',
+                fillColor: 'rgba(171,170,170,0.8745098039215686)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Wilayah Edit_Populasi'] >= 35455.000000 && feature.properties['Batas Wilayah Edit_Populasi'] <= 67100.000000 ) {
                 return {
-                pane: 'pane_TangerangRegencyMap_6',
+                pane: 'pane_TangerangRegencyMap_3',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -1118,195 +584,21 @@
             }
             }
         }
-        map.createPane('pane_TangerangRegencyMap_6');
-        map.getPane('pane_TangerangRegencyMap_6').style.zIndex = 406;
-        map.getPane('pane_TangerangRegencyMap_6').style['mix-blend-mode'] = 'normal';
-        var layer_TangerangRegencyMap_6 = new L.geoJson(json_TangerangRegencyMap_6, {
+        map.createPane('pane_TangerangRegencyMap_3');
+        map.getPane('pane_TangerangRegencyMap_3').style.zIndex = 403;
+        map.getPane('pane_TangerangRegencyMap_3').style['mix-blend-mode'] = 'normal';
+        var layer_TangerangRegencyMap_3 = new L.geoJson(json_TangerangRegencyMap_3, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_TangerangRegencyMap_6',
-            layerName: 'layer_TangerangRegencyMap_6',
-            pane: 'pane_TangerangRegencyMap_6',
-            onEachFeature: pop_TangerangRegencyMap_6,
-            style: style_TangerangRegencyMap_6_0,
+            dataVar: 'json_TangerangRegencyMap_3',
+            layerName: 'layer_TangerangRegencyMap_3',
+            pane: 'pane_TangerangRegencyMap_3',
+            onEachFeature: pop_TangerangRegencyMap_3,
+            style: style_TangerangRegencyMap_3_0,
         });
-        bounds_group.addLayer(layer_TangerangRegencyMap_6);
-        map.addLayer(layer_TangerangRegencyMap_6);
-        function pop_KabTangerang_Competitors_7(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">Store</th>\
-                        <td class="visible-with-data" id="Store">' + (feature.properties['Store'] !== null ? autolinker.link(feature.properties['Store'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Grup</th>\
-                        <td class="visible-with-data" id="Grup">' + (feature.properties['Grup'] !== null ? autolinker.link(feature.properties['Grup'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Address.1</th>\
-                        <td class="visible-with-data" id="Address.1">' + (feature.properties['Address.1'] !== null ? autolinker.link(feature.properties['Address.1'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-            var popup = layer.getPopup();
-            var content = popup.getContent();
-            var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
-            popup.setContent(updatedContent);
-        }
-
-        function style_KabTangerang_Competitors_7_0(feature) {
-            switch(String(feature.properties['Grup.BU'])) {
-                case 'A&W':
-                    return {
-                pane: 'pane_KabTangerang_Competitors_7',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(89,63,231,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'BK':
-                    return {
-                pane: 'pane_KabTangerang_Competitors_7',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(28,218,155,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'KFC':
-                    return {
-                pane: 'pane_KabTangerang_Competitors_7',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(186,64,200,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'McD':
-                    return {
-                pane: 'pane_KabTangerang_Competitors_7',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(198,216,106,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'PH Restaurant':
-                    return {
-                pane: 'pane_KabTangerang_Competitors_7',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(120,226,110,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'PHD':
-                    return {
-                pane: 'pane_KabTangerang_Competitors_7',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(240,102,148,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'Starbucks':
-                    return {
-                pane: 'pane_KabTangerang_Competitors_7',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(204,115,52,1.0)',
-                interactive: true,
-            }
-                    break;
-                default:
-                    return {
-                pane: 'pane_KabTangerang_Competitors_7',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(61,162,235,1.0)',
-                interactive: true,
-            }
-                    break;
-            }
-        }
-        map.createPane('pane_KabTangerang_Competitors_7');
-        map.getPane('pane_KabTangerang_Competitors_7').style.zIndex = 407;
-        map.getPane('pane_KabTangerang_Competitors_7').style['mix-blend-mode'] = 'normal';
-        var layer_KabTangerang_Competitors_7 = new L.geoJson(json_KabTangerang_Competitors_7, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_KabTangerang_Competitors_7',
-            layerName: 'layer_KabTangerang_Competitors_7',
-            pane: 'pane_KabTangerang_Competitors_7',
-            onEachFeature: pop_KabTangerang_Competitors_7,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_KabTangerang_Competitors_7_0(feature));
-            },
-        });
-        bounds_group.addLayer(layer_KabTangerang_Competitors_7);
-        map.addLayer(layer_KabTangerang_Competitors_7);
-        function pop_BekasiRegencyMap_8(feature, layer) {
+        bounds_group.addLayer(layer_TangerangRegencyMap_3);
+        map.addLayer(layer_TangerangRegencyMap_3);
+        function pop_BekasiRegencyMap_4(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['OBJECTID'] !== null ? autolinker.link(feature.properties['OBJECTID'].toLocaleString()) : '') + '</td>\
@@ -1397,9 +689,9 @@
             popup.setContent(updatedContent);
         }
 
-        function style_BekasiRegencyMap_8_0() {
+        function style_BekasiRegencyMap_4_0() {
             return {
-                pane: 'pane_BekasiRegencyMap_8',
+                pane: 'pane_BekasiRegencyMap_4',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -1408,199 +700,25 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(215,215,215,1.0)',
+                fillColor: 'rgba(215,215,215,0.5019607843137255)',
                 interactive: true,
             }
         }
-        map.createPane('pane_BekasiRegencyMap_8');
-        map.getPane('pane_BekasiRegencyMap_8').style.zIndex = 408;
-        map.getPane('pane_BekasiRegencyMap_8').style['mix-blend-mode'] = 'normal';
-        var layer_BekasiRegencyMap_8 = new L.geoJson(json_BekasiRegencyMap_8, {
+        map.createPane('pane_BekasiRegencyMap_4');
+        map.getPane('pane_BekasiRegencyMap_4').style.zIndex = 404;
+        map.getPane('pane_BekasiRegencyMap_4').style['mix-blend-mode'] = 'normal';
+        var layer_BekasiRegencyMap_4 = new L.geoJson(json_BekasiRegencyMap_4, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_BekasiRegencyMap_8',
-            layerName: 'layer_BekasiRegencyMap_8',
-            pane: 'pane_BekasiRegencyMap_8',
-            onEachFeature: pop_BekasiRegencyMap_8,
-            style: style_BekasiRegencyMap_8_0,
+            dataVar: 'json_BekasiRegencyMap_4',
+            layerName: 'layer_BekasiRegencyMap_4',
+            pane: 'pane_BekasiRegencyMap_4',
+            onEachFeature: pop_BekasiRegencyMap_4,
+            style: style_BekasiRegencyMap_4_0,
         });
-        bounds_group.addLayer(layer_BekasiRegencyMap_8);
-        map.addLayer(layer_BekasiRegencyMap_8);
-        function pop_KabBekasi_Competitors_9(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">Store</th>\
-                        <td class="visible-with-data" id="Store">' + (feature.properties['Store'] !== null ? autolinker.link(feature.properties['Store'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Grup</th>\
-                        <td class="visible-with-data" id="Grup">' + (feature.properties['Grup'] !== null ? autolinker.link(feature.properties['Grup'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Address.1</th>\
-                        <td class="visible-with-data" id="Address.1">' + (feature.properties['Address.1'] !== null ? autolinker.link(feature.properties['Address.1'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-            var popup = layer.getPopup();
-            var content = popup.getContent();
-            var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
-            popup.setContent(updatedContent);
-        }
-
-        function style_KabBekasi_Competitors_9_0(feature) {
-            switch(String(feature.properties['Grup.BU'])) {
-                case 'A&W':
-                    return {
-                pane: 'pane_KabBekasi_Competitors_9',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(89,63,231,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'BK':
-                    return {
-                pane: 'pane_KabBekasi_Competitors_9',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(28,218,155,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'KFC':
-                    return {
-                pane: 'pane_KabBekasi_Competitors_9',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(186,64,200,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'McD':
-                    return {
-                pane: 'pane_KabBekasi_Competitors_9',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(198,216,106,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'PH Restaurant':
-                    return {
-                pane: 'pane_KabBekasi_Competitors_9',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(120,226,110,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'PHD':
-                    return {
-                pane: 'pane_KabBekasi_Competitors_9',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(240,102,148,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'Starbucks':
-                    return {
-                pane: 'pane_KabBekasi_Competitors_9',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(204,115,52,1.0)',
-                interactive: true,
-            }
-                    break;
-                default:
-                    return {
-                pane: 'pane_KabBekasi_Competitors_9',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(61,162,235,1.0)',
-                interactive: true,
-            }
-                    break;
-            }
-        }
-        map.createPane('pane_KabBekasi_Competitors_9');
-        map.getPane('pane_KabBekasi_Competitors_9').style.zIndex = 409;
-        map.getPane('pane_KabBekasi_Competitors_9').style['mix-blend-mode'] = 'normal';
-        var layer_KabBekasi_Competitors_9 = new L.geoJson(json_KabBekasi_Competitors_9, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_KabBekasi_Competitors_9',
-            layerName: 'layer_KabBekasi_Competitors_9',
-            pane: 'pane_KabBekasi_Competitors_9',
-            onEachFeature: pop_KabBekasi_Competitors_9,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_KabBekasi_Competitors_9_0(feature));
-            },
-        });
-        bounds_group.addLayer(layer_KabBekasi_Competitors_9);
-        map.addLayer(layer_KabBekasi_Competitors_9);
-        function pop_BekasiMap_10(feature, layer) {
+        bounds_group.addLayer(layer_BekasiRegencyMap_4);
+        map.addLayer(layer_BekasiRegencyMap_4);
+        function pop_BekasiMap_5(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['OBJECTID'] !== null ? autolinker.link(feature.properties['OBJECTID'].toLocaleString()) : '') + '</td>\
@@ -1697,9 +815,9 @@
             popup.setContent(updatedContent);
         }
 
-        function style_BekasiMap_10_0() {
+        function style_BekasiMap_5_0() {
             return {
-                pane: 'pane_BekasiMap_10',
+                pane: 'pane_BekasiMap_5',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -1708,199 +826,25 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(224,224,224,1.0)',
+                fillColor: 'rgba(224,224,224,0.5019607843137255)',
                 interactive: true,
             }
         }
-        map.createPane('pane_BekasiMap_10');
-        map.getPane('pane_BekasiMap_10').style.zIndex = 410;
-        map.getPane('pane_BekasiMap_10').style['mix-blend-mode'] = 'normal';
-        var layer_BekasiMap_10 = new L.geoJson(json_BekasiMap_10, {
+        map.createPane('pane_BekasiMap_5');
+        map.getPane('pane_BekasiMap_5').style.zIndex = 405;
+        map.getPane('pane_BekasiMap_5').style['mix-blend-mode'] = 'normal';
+        var layer_BekasiMap_5 = new L.geoJson(json_BekasiMap_5, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_BekasiMap_10',
-            layerName: 'layer_BekasiMap_10',
-            pane: 'pane_BekasiMap_10',
-            onEachFeature: pop_BekasiMap_10,
-            style: style_BekasiMap_10_0,
+            dataVar: 'json_BekasiMap_5',
+            layerName: 'layer_BekasiMap_5',
+            pane: 'pane_BekasiMap_5',
+            onEachFeature: pop_BekasiMap_5,
+            style: style_BekasiMap_5_0,
         });
-        bounds_group.addLayer(layer_BekasiMap_10);
-        map.addLayer(layer_BekasiMap_10);
-        function pop_Bekasi_Competitors_11(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">Store</th>\
-                        <td class="visible-with-data" id="Store">' + (feature.properties['Store'] !== null ? autolinker.link(feature.properties['Store'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Grup</th>\
-                        <td class="visible-with-data" id="Grup">' + (feature.properties['Grup'] !== null ? autolinker.link(feature.properties['Grup'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Address.1</th>\
-                        <td class="visible-with-data" id="Address.1">' + (feature.properties['Address.1'] !== null ? autolinker.link(feature.properties['Address.1'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-            var popup = layer.getPopup();
-            var content = popup.getContent();
-            var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
-            popup.setContent(updatedContent);
-        }
-
-        function style_Bekasi_Competitors_11_0(feature) {
-            switch(String(feature.properties['Grup.BU'])) {
-                case 'A&W':
-                    return {
-                pane: 'pane_Bekasi_Competitors_11',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(89,63,231,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'BK':
-                    return {
-                pane: 'pane_Bekasi_Competitors_11',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(28,218,155,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'KFC':
-                    return {
-                pane: 'pane_Bekasi_Competitors_11',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(186,64,200,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'McD':
-                    return {
-                pane: 'pane_Bekasi_Competitors_11',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(198,216,106,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'PH Restaurant':
-                    return {
-                pane: 'pane_Bekasi_Competitors_11',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(120,226,110,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'PHD':
-                    return {
-                pane: 'pane_Bekasi_Competitors_11',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(240,102,148,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'Starbucks':
-                    return {
-                pane: 'pane_Bekasi_Competitors_11',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(204,115,52,1.0)',
-                interactive: true,
-            }
-                    break;
-                default:
-                    return {
-                pane: 'pane_Bekasi_Competitors_11',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(61,162,235,1.0)',
-                interactive: true,
-            }
-                    break;
-            }
-        }
-        map.createPane('pane_Bekasi_Competitors_11');
-        map.getPane('pane_Bekasi_Competitors_11').style.zIndex = 411;
-        map.getPane('pane_Bekasi_Competitors_11').style['mix-blend-mode'] = 'normal';
-        var layer_Bekasi_Competitors_11 = new L.geoJson(json_Bekasi_Competitors_11, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_Bekasi_Competitors_11',
-            layerName: 'layer_Bekasi_Competitors_11',
-            pane: 'pane_Bekasi_Competitors_11',
-            onEachFeature: pop_Bekasi_Competitors_11,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_Bekasi_Competitors_11_0(feature));
-            },
-        });
-        bounds_group.addLayer(layer_Bekasi_Competitors_11);
-        map.addLayer(layer_Bekasi_Competitors_11);
-        function pop_BogorMap_12(feature, layer) {
+        bounds_group.addLayer(layer_BekasiMap_5);
+        map.addLayer(layer_BekasiMap_5);
+        function pop_BogorMap_6(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['OBJECTID'] !== null ? autolinker.link(feature.properties['OBJECTID'].toLocaleString()) : '') + '</td>\
@@ -1997,10 +941,10 @@
             popup.setContent(updatedContent);
         }
 
-        function style_BogorMap_12_0(feature) {
+        function style_BogorMap_6_0(feature) {
             if (feature.properties['Batas Wilayah Edit_Populasi'] >= 44.000000 && feature.properties['Batas Wilayah Edit_Populasi'] <= 1373.000000 ) {
                 return {
-                pane: 'pane_BogorMap_12',
+                pane: 'pane_BogorMap_6',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -2009,13 +953,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(250,250,250,0.8509803921568627)',
+                fillColor: 'rgba(250,250,250,0.5019607843137255)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Wilayah Edit_Populasi'] >= 1373.000000 && feature.properties['Batas Wilayah Edit_Populasi'] <= 4588.000000 ) {
                 return {
-                pane: 'pane_BogorMap_12',
+                pane: 'pane_BogorMap_6',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -2024,13 +968,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(224,223,223,0.8901960784313725)',
+                fillColor: 'rgba(224,223,223,0.6274509803921569)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Wilayah Edit_Populasi'] >= 4588.000000 && feature.properties['Batas Wilayah Edit_Populasi'] <= 7245.000000 ) {
                 return {
-                pane: 'pane_BogorMap_12',
+                pane: 'pane_BogorMap_6',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -2039,13 +983,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,196,196,0.9254901960784314)',
+                fillColor: 'rgba(197,196,196,0.7529411764705882)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Wilayah Edit_Populasi'] >= 7245.000000 && feature.properties['Batas Wilayah Edit_Populasi'] <= 10363.000000 ) {
                 return {
-                pane: 'pane_BogorMap_12',
+                pane: 'pane_BogorMap_6',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -2054,13 +998,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(171,170,170,0.9647058823529412)',
+                fillColor: 'rgba(171,170,170,0.8745098039215686)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Wilayah Edit_Populasi'] >= 10363.000000 && feature.properties['Batas Wilayah Edit_Populasi'] <= 13836.000000 ) {
                 return {
-                pane: 'pane_BogorMap_12',
+                pane: 'pane_BogorMap_6',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -2074,195 +1018,21 @@
             }
             }
         }
-        map.createPane('pane_BogorMap_12');
-        map.getPane('pane_BogorMap_12').style.zIndex = 412;
-        map.getPane('pane_BogorMap_12').style['mix-blend-mode'] = 'normal';
-        var layer_BogorMap_12 = new L.geoJson(json_BogorMap_12, {
+        map.createPane('pane_BogorMap_6');
+        map.getPane('pane_BogorMap_6').style.zIndex = 406;
+        map.getPane('pane_BogorMap_6').style['mix-blend-mode'] = 'normal';
+        var layer_BogorMap_6 = new L.geoJson(json_BogorMap_6, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_BogorMap_12',
-            layerName: 'layer_BogorMap_12',
-            pane: 'pane_BogorMap_12',
-            onEachFeature: pop_BogorMap_12,
-            style: style_BogorMap_12_0,
+            dataVar: 'json_BogorMap_6',
+            layerName: 'layer_BogorMap_6',
+            pane: 'pane_BogorMap_6',
+            onEachFeature: pop_BogorMap_6,
+            style: style_BogorMap_6_0,
         });
-        bounds_group.addLayer(layer_BogorMap_12);
-        map.addLayer(layer_BogorMap_12);
-        function pop_Bogor_Competitors_13(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">Store</th>\
-                        <td class="visible-with-data" id="Store">' + (feature.properties['Store'] !== null ? autolinker.link(feature.properties['Store'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Grup</th>\
-                        <td class="visible-with-data" id="Grup">' + (feature.properties['Grup'] !== null ? autolinker.link(feature.properties['Grup'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Address.1</th>\
-                        <td class="visible-with-data" id="Address.1">' + (feature.properties['Address.1'] !== null ? autolinker.link(feature.properties['Address.1'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-            var popup = layer.getPopup();
-            var content = popup.getContent();
-            var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
-            popup.setContent(updatedContent);
-        }
-
-        function style_Bogor_Competitors_13_0(feature) {
-            switch(String(feature.properties['Grup.BU'])) {
-                case 'A&W':
-                    return {
-                pane: 'pane_Bogor_Competitors_13',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(89,63,231,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'BK':
-                    return {
-                pane: 'pane_Bogor_Competitors_13',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(28,218,155,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'KFC':
-                    return {
-                pane: 'pane_Bogor_Competitors_13',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(186,64,200,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'McD':
-                    return {
-                pane: 'pane_Bogor_Competitors_13',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(198,216,106,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'PH Restaurant':
-                    return {
-                pane: 'pane_Bogor_Competitors_13',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(120,226,110,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'PHD':
-                    return {
-                pane: 'pane_Bogor_Competitors_13',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(240,102,148,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'Starbucks':
-                    return {
-                pane: 'pane_Bogor_Competitors_13',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(204,115,52,1.0)',
-                interactive: true,
-            }
-                    break;
-                default:
-                    return {
-                pane: 'pane_Bogor_Competitors_13',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(61,162,235,1.0)',
-                interactive: true,
-            }
-                    break;
-            }
-        }
-        map.createPane('pane_Bogor_Competitors_13');
-        map.getPane('pane_Bogor_Competitors_13').style.zIndex = 413;
-        map.getPane('pane_Bogor_Competitors_13').style['mix-blend-mode'] = 'normal';
-        var layer_Bogor_Competitors_13 = new L.geoJson(json_Bogor_Competitors_13, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_Bogor_Competitors_13',
-            layerName: 'layer_Bogor_Competitors_13',
-            pane: 'pane_Bogor_Competitors_13',
-            onEachFeature: pop_Bogor_Competitors_13,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_Bogor_Competitors_13_0(feature));
-            },
-        });
-        bounds_group.addLayer(layer_Bogor_Competitors_13);
-        map.addLayer(layer_Bogor_Competitors_13);
-        function pop_BogorRegency_14(feature, layer) {
+        bounds_group.addLayer(layer_BogorMap_6);
+        map.addLayer(layer_BogorMap_6);
+        function pop_BogorRegency_7(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['OBJECTID'] !== null ? autolinker.link(feature.properties['OBJECTID'].toLocaleString()) : '') + '</td>\
@@ -2353,9 +1123,9 @@
             popup.setContent(updatedContent);
         }
 
-        function style_BogorRegency_14_0() {
+        function style_BogorRegency_7_0() {
             return {
-                pane: 'pane_BogorRegency_14',
+                pane: 'pane_BogorRegency_7',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -2364,199 +1134,25 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(224,224,224,1.0)',
+                fillColor: 'rgba(224,224,224,0.5019607843137255)',
                 interactive: true,
             }
         }
-        map.createPane('pane_BogorRegency_14');
-        map.getPane('pane_BogorRegency_14').style.zIndex = 414;
-        map.getPane('pane_BogorRegency_14').style['mix-blend-mode'] = 'normal';
-        var layer_BogorRegency_14 = new L.geoJson(json_BogorRegency_14, {
+        map.createPane('pane_BogorRegency_7');
+        map.getPane('pane_BogorRegency_7').style.zIndex = 407;
+        map.getPane('pane_BogorRegency_7').style['mix-blend-mode'] = 'normal';
+        var layer_BogorRegency_7 = new L.geoJson(json_BogorRegency_7, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_BogorRegency_14',
-            layerName: 'layer_BogorRegency_14',
-            pane: 'pane_BogorRegency_14',
-            onEachFeature: pop_BogorRegency_14,
-            style: style_BogorRegency_14_0,
+            dataVar: 'json_BogorRegency_7',
+            layerName: 'layer_BogorRegency_7',
+            pane: 'pane_BogorRegency_7',
+            onEachFeature: pop_BogorRegency_7,
+            style: style_BogorRegency_7_0,
         });
-        bounds_group.addLayer(layer_BogorRegency_14);
-        map.addLayer(layer_BogorRegency_14);
-        function pop_KabBogor_Competitors_15(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">Store</th>\
-                        <td class="visible-with-data" id="Store">' + (feature.properties['Store'] !== null ? autolinker.link(feature.properties['Store'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Grup</th>\
-                        <td class="visible-with-data" id="Grup">' + (feature.properties['Grup'] !== null ? autolinker.link(feature.properties['Grup'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Address.1</th>\
-                        <td class="visible-with-data" id="Address.1">' + (feature.properties['Address.1'] !== null ? autolinker.link(feature.properties['Address.1'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-            var popup = layer.getPopup();
-            var content = popup.getContent();
-            var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
-            popup.setContent(updatedContent);
-        }
-
-        function style_KabBogor_Competitors_15_0(feature) {
-            switch(String(feature.properties['Grup.BU'])) {
-                case 'A&W':
-                    return {
-                pane: 'pane_KabBogor_Competitors_15',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(89,63,231,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'BK':
-                    return {
-                pane: 'pane_KabBogor_Competitors_15',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(28,218,155,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'KFC':
-                    return {
-                pane: 'pane_KabBogor_Competitors_15',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(186,64,200,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'McD':
-                    return {
-                pane: 'pane_KabBogor_Competitors_15',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(198,216,106,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'PH Restaurant':
-                    return {
-                pane: 'pane_KabBogor_Competitors_15',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(120,226,110,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'PHD':
-                    return {
-                pane: 'pane_KabBogor_Competitors_15',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(240,102,148,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'Starbucks':
-                    return {
-                pane: 'pane_KabBogor_Competitors_15',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(204,115,52,1.0)',
-                interactive: true,
-            }
-                    break;
-                default:
-                    return {
-                pane: 'pane_KabBogor_Competitors_15',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(61,162,235,1.0)',
-                interactive: true,
-            }
-                    break;
-            }
-        }
-        map.createPane('pane_KabBogor_Competitors_15');
-        map.getPane('pane_KabBogor_Competitors_15').style.zIndex = 415;
-        map.getPane('pane_KabBogor_Competitors_15').style['mix-blend-mode'] = 'normal';
-        var layer_KabBogor_Competitors_15 = new L.geoJson(json_KabBogor_Competitors_15, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_KabBogor_Competitors_15',
-            layerName: 'layer_KabBogor_Competitors_15',
-            pane: 'pane_KabBogor_Competitors_15',
-            onEachFeature: pop_KabBogor_Competitors_15,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_KabBogor_Competitors_15_0(feature));
-            },
-        });
-        bounds_group.addLayer(layer_KabBogor_Competitors_15);
-        map.addLayer(layer_KabBogor_Competitors_15);
-        function pop_Depok_16(feature, layer) {
+        bounds_group.addLayer(layer_BogorRegency_7);
+        map.addLayer(layer_BogorRegency_7);
+        function pop_Depok_8(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['OBJECTID'] !== null ? autolinker.link(feature.properties['OBJECTID'].toLocaleString()) : '') + '</td>\
@@ -2647,9 +1243,9 @@
             popup.setContent(updatedContent);
         }
 
-        function style_Depok_16_0() {
+        function style_Depok_8_0() {
             return {
-                pane: 'pane_Depok_16',
+                pane: 'pane_Depok_8',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -2658,199 +1254,25 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(224,224,224,1.0)',
+                fillColor: 'rgba(224,224,224,0.5019607843137255)',
                 interactive: true,
             }
         }
-        map.createPane('pane_Depok_16');
-        map.getPane('pane_Depok_16').style.zIndex = 416;
-        map.getPane('pane_Depok_16').style['mix-blend-mode'] = 'normal';
-        var layer_Depok_16 = new L.geoJson(json_Depok_16, {
+        map.createPane('pane_Depok_8');
+        map.getPane('pane_Depok_8').style.zIndex = 408;
+        map.getPane('pane_Depok_8').style['mix-blend-mode'] = 'normal';
+        var layer_Depok_8 = new L.geoJson(json_Depok_8, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Depok_16',
-            layerName: 'layer_Depok_16',
-            pane: 'pane_Depok_16',
-            onEachFeature: pop_Depok_16,
-            style: style_Depok_16_0,
+            dataVar: 'json_Depok_8',
+            layerName: 'layer_Depok_8',
+            pane: 'pane_Depok_8',
+            onEachFeature: pop_Depok_8,
+            style: style_Depok_8_0,
         });
-        bounds_group.addLayer(layer_Depok_16);
-        map.addLayer(layer_Depok_16);
-        function pop_Depok_Competitors_17(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">Store</th>\
-                        <td class="visible-with-data" id="Store">' + (feature.properties['Store'] !== null ? autolinker.link(feature.properties['Store'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Grup</th>\
-                        <td class="visible-with-data" id="Grup">' + (feature.properties['Grup'] !== null ? autolinker.link(feature.properties['Grup'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Address.1</th>\
-                        <td class="visible-with-data" id="Address.1">' + (feature.properties['Address.1'] !== null ? autolinker.link(feature.properties['Address.1'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-            var popup = layer.getPopup();
-            var content = popup.getContent();
-            var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
-            popup.setContent(updatedContent);
-        }
-
-        function style_Depok_Competitors_17_0(feature) {
-            switch(String(feature.properties['Grup.BU'])) {
-                case 'A&W':
-                    return {
-                pane: 'pane_Depok_Competitors_17',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(89,63,231,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'BK':
-                    return {
-                pane: 'pane_Depok_Competitors_17',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(28,218,155,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'KFC':
-                    return {
-                pane: 'pane_Depok_Competitors_17',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(186,64,200,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'McD':
-                    return {
-                pane: 'pane_Depok_Competitors_17',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(198,216,106,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'PH Restaurant':
-                    return {
-                pane: 'pane_Depok_Competitors_17',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(120,226,110,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'PHD':
-                    return {
-                pane: 'pane_Depok_Competitors_17',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(240,102,148,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'Starbucks':
-                    return {
-                pane: 'pane_Depok_Competitors_17',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(204,115,52,1.0)',
-                interactive: true,
-            }
-                    break;
-                default:
-                    return {
-                pane: 'pane_Depok_Competitors_17',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(61,162,235,1.0)',
-                interactive: true,
-            }
-                    break;
-            }
-        }
-        map.createPane('pane_Depok_Competitors_17');
-        map.getPane('pane_Depok_Competitors_17').style.zIndex = 417;
-        map.getPane('pane_Depok_Competitors_17').style['mix-blend-mode'] = 'normal';
-        var layer_Depok_Competitors_17 = new L.geoJson(json_Depok_Competitors_17, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_Depok_Competitors_17',
-            layerName: 'layer_Depok_Competitors_17',
-            pane: 'pane_Depok_Competitors_17',
-            onEachFeature: pop_Depok_Competitors_17,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_Depok_Competitors_17_0(feature));
-            },
-        });
-        bounds_group.addLayer(layer_Depok_Competitors_17);
-        map.addLayer(layer_Depok_Competitors_17);
-        function pop_NorthJakarta_18(feature, layer) {
+        bounds_group.addLayer(layer_Depok_8);
+        map.addLayer(layer_Depok_8);
+        function pop_NorthJakarta_9(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['OBJECTID'] !== null ? autolinker.link(feature.properties['OBJECTID'].toLocaleString()) : '') + '</td>\
@@ -2947,10 +1369,10 @@
             popup.setContent(updatedContent);
         }
 
-        function style_NorthJakarta_18_0(feature) {
+        function style_NorthJakarta_9_0(feature) {
             if (feature.properties['Batas Desa DKI Jakarta Edit_POP'] >= 0.000000 && feature.properties['Batas Desa DKI Jakarta Edit_POP'] <= 10000.000000 ) {
                 return {
-                pane: 'pane_NorthJakarta_18',
+                pane: 'pane_NorthJakarta_9',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -2959,13 +1381,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(250,250,250,0.8509803921568627)',
+                fillColor: 'rgba(250,250,250,0.5019607843137255)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Desa DKI Jakarta Edit_POP'] >= 10001.000000 && feature.properties['Batas Desa DKI Jakarta Edit_POP'] <= 20000.000000 ) {
                 return {
-                pane: 'pane_NorthJakarta_18',
+                pane: 'pane_NorthJakarta_9',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -2974,13 +1396,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(224,223,223,0.8901960784313725)',
+                fillColor: 'rgba(224,223,223,0.6274509803921569)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Desa DKI Jakarta Edit_POP'] >= 20001.000000 && feature.properties['Batas Desa DKI Jakarta Edit_POP'] <= 50000.000000 ) {
                 return {
-                pane: 'pane_NorthJakarta_18',
+                pane: 'pane_NorthJakarta_9',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -2989,13 +1411,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,196,196,0.9254901960784314)',
+                fillColor: 'rgba(197,196,196,0.7529411764705882)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Desa DKI Jakarta Edit_POP'] >= 50001.000000 && feature.properties['Batas Desa DKI Jakarta Edit_POP'] <= 100000.000000 ) {
                 return {
-                pane: 'pane_NorthJakarta_18',
+                pane: 'pane_NorthJakarta_9',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -3004,13 +1426,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(171,170,170,0.9647058823529412)',
+                fillColor: 'rgba(171,170,170,0.8745098039215686)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Desa DKI Jakarta Edit_POP'] >= 100001.000000 && feature.properties['Batas Desa DKI Jakarta Edit_POP'] <= 150000.000000 ) {
                 return {
-                pane: 'pane_NorthJakarta_18',
+                pane: 'pane_NorthJakarta_9',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -3024,195 +1446,21 @@
             }
             }
         }
-        map.createPane('pane_NorthJakarta_18');
-        map.getPane('pane_NorthJakarta_18').style.zIndex = 418;
-        map.getPane('pane_NorthJakarta_18').style['mix-blend-mode'] = 'normal';
-        var layer_NorthJakarta_18 = new L.geoJson(json_NorthJakarta_18, {
+        map.createPane('pane_NorthJakarta_9');
+        map.getPane('pane_NorthJakarta_9').style.zIndex = 409;
+        map.getPane('pane_NorthJakarta_9').style['mix-blend-mode'] = 'normal';
+        var layer_NorthJakarta_9 = new L.geoJson(json_NorthJakarta_9, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_NorthJakarta_18',
-            layerName: 'layer_NorthJakarta_18',
-            pane: 'pane_NorthJakarta_18',
-            onEachFeature: pop_NorthJakarta_18,
-            style: style_NorthJakarta_18_0,
+            dataVar: 'json_NorthJakarta_9',
+            layerName: 'layer_NorthJakarta_9',
+            pane: 'pane_NorthJakarta_9',
+            onEachFeature: pop_NorthJakarta_9,
+            style: style_NorthJakarta_9_0,
         });
-        bounds_group.addLayer(layer_NorthJakarta_18);
-        map.addLayer(layer_NorthJakarta_18);
-        function pop_NorthJakarta_Competitors_19(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">Store</th>\
-                        <td class="visible-with-data" id="Store">' + (feature.properties['Store'] !== null ? autolinker.link(feature.properties['Store'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Grup</th>\
-                        <td class="visible-with-data" id="Grup">' + (feature.properties['Grup'] !== null ? autolinker.link(feature.properties['Grup'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Address.1</th>\
-                        <td class="visible-with-data" id="Address.1">' + (feature.properties['Address.1'] !== null ? autolinker.link(feature.properties['Address.1'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-            var popup = layer.getPopup();
-            var content = popup.getContent();
-            var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
-            popup.setContent(updatedContent);
-        }
-
-        function style_NorthJakarta_Competitors_19_0(feature) {
-            switch(String(feature.properties['Grup.BU'])) {
-                case 'A&W':
-                    return {
-                pane: 'pane_NorthJakarta_Competitors_19',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(89,63,231,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'BK':
-                    return {
-                pane: 'pane_NorthJakarta_Competitors_19',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(28,218,155,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'KFC':
-                    return {
-                pane: 'pane_NorthJakarta_Competitors_19',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(186,64,200,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'McD':
-                    return {
-                pane: 'pane_NorthJakarta_Competitors_19',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(198,216,106,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'PH Restaurant':
-                    return {
-                pane: 'pane_NorthJakarta_Competitors_19',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(120,226,110,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'PHD':
-                    return {
-                pane: 'pane_NorthJakarta_Competitors_19',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(240,102,148,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'Starbucks':
-                    return {
-                pane: 'pane_NorthJakarta_Competitors_19',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(204,115,52,1.0)',
-                interactive: true,
-            }
-                    break;
-                default:
-                    return {
-                pane: 'pane_NorthJakarta_Competitors_19',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(61,162,235,1.0)',
-                interactive: true,
-            }
-                    break;
-            }
-        }
-        map.createPane('pane_NorthJakarta_Competitors_19');
-        map.getPane('pane_NorthJakarta_Competitors_19').style.zIndex = 419;
-        map.getPane('pane_NorthJakarta_Competitors_19').style['mix-blend-mode'] = 'normal';
-        var layer_NorthJakarta_Competitors_19 = new L.geoJson(json_NorthJakarta_Competitors_19, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_NorthJakarta_Competitors_19',
-            layerName: 'layer_NorthJakarta_Competitors_19',
-            pane: 'pane_NorthJakarta_Competitors_19',
-            onEachFeature: pop_NorthJakarta_Competitors_19,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_NorthJakarta_Competitors_19_0(feature));
-            },
-        });
-        bounds_group.addLayer(layer_NorthJakarta_Competitors_19);
-        map.addLayer(layer_NorthJakarta_Competitors_19);
-        function pop_WestJakarta_20(feature, layer) {
+        bounds_group.addLayer(layer_NorthJakarta_9);
+        map.addLayer(layer_NorthJakarta_9);
+        function pop_WestJakarta_10(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['OBJECTID'] !== null ? autolinker.link(feature.properties['OBJECTID'].toLocaleString()) : '') + '</td>\
@@ -3309,10 +1557,10 @@
             popup.setContent(updatedContent);
         }
 
-        function style_WestJakarta_20_0(feature) {
+        function style_WestJakarta_10_0(feature) {
             if (feature.properties['Batas Desa DKI Jakarta Edit_POP'] >= 0.000000 && feature.properties['Batas Desa DKI Jakarta Edit_POP'] <= 10000.000000 ) {
                 return {
-                pane: 'pane_WestJakarta_20',
+                pane: 'pane_WestJakarta_10',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -3321,13 +1569,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(250,250,250,0.8509803921568627)',
+                fillColor: 'rgba(250,250,250,0.5019607843137255)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Desa DKI Jakarta Edit_POP'] >= 10001.000000 && feature.properties['Batas Desa DKI Jakarta Edit_POP'] <= 20000.000000 ) {
                 return {
-                pane: 'pane_WestJakarta_20',
+                pane: 'pane_WestJakarta_10',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -3336,13 +1584,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(224,223,223,0.8901960784313725)',
+                fillColor: 'rgba(224,223,223,0.6274509803921569)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Desa DKI Jakarta Edit_POP'] >= 20001.000000 && feature.properties['Batas Desa DKI Jakarta Edit_POP'] <= 50000.000000 ) {
                 return {
-                pane: 'pane_WestJakarta_20',
+                pane: 'pane_WestJakarta_10',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -3351,13 +1599,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,196,196,0.9254901960784314)',
+                fillColor: 'rgba(197,196,196,0.7529411764705882)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Desa DKI Jakarta Edit_POP'] >= 50001.000000 && feature.properties['Batas Desa DKI Jakarta Edit_POP'] <= 100000.000000 ) {
                 return {
-                pane: 'pane_WestJakarta_20',
+                pane: 'pane_WestJakarta_10',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -3366,13 +1614,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(171,170,170,0.9647058823529412)',
+                fillColor: 'rgba(171,170,170,0.8745098039215686)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Desa DKI Jakarta Edit_POP'] >= 100001.000000 && feature.properties['Batas Desa DKI Jakarta Edit_POP'] <= 150000.000000 ) {
                 return {
-                pane: 'pane_WestJakarta_20',
+                pane: 'pane_WestJakarta_10',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -3386,191 +1634,21 @@
             }
             }
         }
-        map.createPane('pane_WestJakarta_20');
-        map.getPane('pane_WestJakarta_20').style.zIndex = 420;
-        map.getPane('pane_WestJakarta_20').style['mix-blend-mode'] = 'normal';
-        var layer_WestJakarta_20 = new L.geoJson(json_WestJakarta_20, {
+        map.createPane('pane_WestJakarta_10');
+        map.getPane('pane_WestJakarta_10').style.zIndex = 410;
+        map.getPane('pane_WestJakarta_10').style['mix-blend-mode'] = 'normal';
+        var layer_WestJakarta_10 = new L.geoJson(json_WestJakarta_10, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_WestJakarta_20',
-            layerName: 'layer_WestJakarta_20',
-            pane: 'pane_WestJakarta_20',
-            onEachFeature: pop_WestJakarta_20,
-            style: style_WestJakarta_20_0,
+            dataVar: 'json_WestJakarta_10',
+            layerName: 'layer_WestJakarta_10',
+            pane: 'pane_WestJakarta_10',
+            onEachFeature: pop_WestJakarta_10,
+            style: style_WestJakarta_10_0,
         });
-        bounds_group.addLayer(layer_WestJakarta_20);
-        map.addLayer(layer_WestJakarta_20);
-        function pop_WestJakarta_Competitors_21(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">Store</th>\
-                        <td class="visible-with-data" id="Store">' + (feature.properties['Store'] !== null ? autolinker.link(feature.properties['Store'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Grup</th>\
-                        <td class="visible-with-data" id="Grup">' + (feature.properties['Grup'] !== null ? autolinker.link(feature.properties['Grup'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-            var popup = layer.getPopup();
-            var content = popup.getContent();
-            var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
-            popup.setContent(updatedContent);
-        }
-
-        function style_WestJakarta_Competitors_21_0(feature) {
-            switch(String(feature.properties['Grup.BU'])) {
-                case 'A&W':
-                    return {
-                pane: 'pane_WestJakarta_Competitors_21',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(89,63,231,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'BK':
-                    return {
-                pane: 'pane_WestJakarta_Competitors_21',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(28,218,155,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'KFC':
-                    return {
-                pane: 'pane_WestJakarta_Competitors_21',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(186,64,200,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'McD':
-                    return {
-                pane: 'pane_WestJakarta_Competitors_21',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(198,216,106,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'PH Restaurant':
-                    return {
-                pane: 'pane_WestJakarta_Competitors_21',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(120,226,110,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'PHD':
-                    return {
-                pane: 'pane_WestJakarta_Competitors_21',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(240,102,148,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'Starbucks':
-                    return {
-                pane: 'pane_WestJakarta_Competitors_21',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(204,115,52,1.0)',
-                interactive: true,
-            }
-                    break;
-                default:
-                    return {
-                pane: 'pane_WestJakarta_Competitors_21',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(61,162,235,1.0)',
-                interactive: true,
-            }
-                    break;
-            }
-        }
-        map.createPane('pane_WestJakarta_Competitors_21');
-        map.getPane('pane_WestJakarta_Competitors_21').style.zIndex = 421;
-        map.getPane('pane_WestJakarta_Competitors_21').style['mix-blend-mode'] = 'normal';
-        var layer_WestJakarta_Competitors_21 = new L.geoJson(json_WestJakarta_Competitors_21, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_WestJakarta_Competitors_21',
-            layerName: 'layer_WestJakarta_Competitors_21',
-            pane: 'pane_WestJakarta_Competitors_21',
-            onEachFeature: pop_WestJakarta_Competitors_21,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_WestJakarta_Competitors_21_0(feature));
-            },
-        });
-        bounds_group.addLayer(layer_WestJakarta_Competitors_21);
-        map.addLayer(layer_WestJakarta_Competitors_21);
-        function pop_EastJakarta_22(feature, layer) {
+        bounds_group.addLayer(layer_WestJakarta_10);
+        map.addLayer(layer_WestJakarta_10);
+        function pop_EastJakarta_11(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['OBJECTID'] !== null ? autolinker.link(feature.properties['OBJECTID'].toLocaleString()) : '') + '</td>\
@@ -3667,10 +1745,10 @@
             popup.setContent(updatedContent);
         }
 
-        function style_EastJakarta_22_0(feature) {
+        function style_EastJakarta_11_0(feature) {
             if (feature.properties['Batas Desa DKI Jakarta Edit_POP'] >= 0.000000 && feature.properties['Batas Desa DKI Jakarta Edit_POP'] <= 10000.000000 ) {
                 return {
-                pane: 'pane_EastJakarta_22',
+                pane: 'pane_EastJakarta_11',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -3679,13 +1757,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(250,250,250,0.8509803921568627)',
+                fillColor: 'rgba(250,250,250,0.5019607843137255)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Desa DKI Jakarta Edit_POP'] >= 10001.000000 && feature.properties['Batas Desa DKI Jakarta Edit_POP'] <= 20000.000000 ) {
                 return {
-                pane: 'pane_EastJakarta_22',
+                pane: 'pane_EastJakarta_11',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -3694,13 +1772,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(224,223,223,0.8901960784313725)',
+                fillColor: 'rgba(224,223,223,0.6274509803921569)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Desa DKI Jakarta Edit_POP'] >= 20001.000000 && feature.properties['Batas Desa DKI Jakarta Edit_POP'] <= 50000.000000 ) {
                 return {
-                pane: 'pane_EastJakarta_22',
+                pane: 'pane_EastJakarta_11',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -3709,13 +1787,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,196,196,0.9254901960784314)',
+                fillColor: 'rgba(197,196,196,0.7529411764705882)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Desa DKI Jakarta Edit_POP'] >= 50001.000000 && feature.properties['Batas Desa DKI Jakarta Edit_POP'] <= 100000.000000 ) {
                 return {
-                pane: 'pane_EastJakarta_22',
+                pane: 'pane_EastJakarta_11',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -3724,13 +1802,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(171,170,170,0.9647058823529412)',
+                fillColor: 'rgba(171,170,170,0.8745098039215686)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Desa DKI Jakarta Edit_POP'] >= 100001.000000 && feature.properties['Batas Desa DKI Jakarta Edit_POP'] <= 150000.000000 ) {
                 return {
-                pane: 'pane_EastJakarta_22',
+                pane: 'pane_EastJakarta_11',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -3744,195 +1822,21 @@
             }
             }
         }
-        map.createPane('pane_EastJakarta_22');
-        map.getPane('pane_EastJakarta_22').style.zIndex = 422;
-        map.getPane('pane_EastJakarta_22').style['mix-blend-mode'] = 'normal';
-        var layer_EastJakarta_22 = new L.geoJson(json_EastJakarta_22, {
+        map.createPane('pane_EastJakarta_11');
+        map.getPane('pane_EastJakarta_11').style.zIndex = 411;
+        map.getPane('pane_EastJakarta_11').style['mix-blend-mode'] = 'normal';
+        var layer_EastJakarta_11 = new L.geoJson(json_EastJakarta_11, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_EastJakarta_22',
-            layerName: 'layer_EastJakarta_22',
-            pane: 'pane_EastJakarta_22',
-            onEachFeature: pop_EastJakarta_22,
-            style: style_EastJakarta_22_0,
+            dataVar: 'json_EastJakarta_11',
+            layerName: 'layer_EastJakarta_11',
+            pane: 'pane_EastJakarta_11',
+            onEachFeature: pop_EastJakarta_11,
+            style: style_EastJakarta_11_0,
         });
-        bounds_group.addLayer(layer_EastJakarta_22);
-        map.addLayer(layer_EastJakarta_22);
-        function pop_EastJakarta_Competitors_23(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">Store</th>\
-                        <td class="visible-with-data" id="Store">' + (feature.properties['Store'] !== null ? autolinker.link(feature.properties['Store'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Grup</th>\
-                        <td class="visible-with-data" id="Grup">' + (feature.properties['Grup'] !== null ? autolinker.link(feature.properties['Grup'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Address.1</th>\
-                        <td class="visible-with-data" id="Address.1">' + (feature.properties['Address.1'] !== null ? autolinker.link(feature.properties['Address.1'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-            var popup = layer.getPopup();
-            var content = popup.getContent();
-            var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
-            popup.setContent(updatedContent);
-        }
-
-        function style_EastJakarta_Competitors_23_0(feature) {
-            switch(String(feature.properties['Grup.BU'])) {
-                case 'A&W':
-                    return {
-                pane: 'pane_EastJakarta_Competitors_23',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(89,63,231,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'BK':
-                    return {
-                pane: 'pane_EastJakarta_Competitors_23',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(28,218,155,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'KFC':
-                    return {
-                pane: 'pane_EastJakarta_Competitors_23',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(186,64,200,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'McD':
-                    return {
-                pane: 'pane_EastJakarta_Competitors_23',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(198,216,106,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'PH Restaurant':
-                    return {
-                pane: 'pane_EastJakarta_Competitors_23',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(120,226,110,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'PHD':
-                    return {
-                pane: 'pane_EastJakarta_Competitors_23',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(240,102,148,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'Starbucks':
-                    return {
-                pane: 'pane_EastJakarta_Competitors_23',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(204,115,52,1.0)',
-                interactive: true,
-            }
-                    break;
-                default:
-                    return {
-                pane: 'pane_EastJakarta_Competitors_23',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(61,162,235,1.0)',
-                interactive: true,
-            }
-                    break;
-            }
-        }
-        map.createPane('pane_EastJakarta_Competitors_23');
-        map.getPane('pane_EastJakarta_Competitors_23').style.zIndex = 423;
-        map.getPane('pane_EastJakarta_Competitors_23').style['mix-blend-mode'] = 'normal';
-        var layer_EastJakarta_Competitors_23 = new L.geoJson(json_EastJakarta_Competitors_23, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_EastJakarta_Competitors_23',
-            layerName: 'layer_EastJakarta_Competitors_23',
-            pane: 'pane_EastJakarta_Competitors_23',
-            onEachFeature: pop_EastJakarta_Competitors_23,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_EastJakarta_Competitors_23_0(feature));
-            },
-        });
-        bounds_group.addLayer(layer_EastJakarta_Competitors_23);
-        map.addLayer(layer_EastJakarta_Competitors_23);
-        function pop_CentralJakarta_24(feature, layer) {
+        bounds_group.addLayer(layer_EastJakarta_11);
+        map.addLayer(layer_EastJakarta_11);
+        function pop_CentralJakarta_12(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['OBJECTID'] !== null ? autolinker.link(feature.properties['OBJECTID'].toLocaleString()) : '') + '</td>\
@@ -4029,10 +1933,10 @@
             popup.setContent(updatedContent);
         }
 
-        function style_CentralJakarta_24_0(feature) {
+        function style_CentralJakarta_12_0(feature) {
             if (feature.properties['Batas Desa DKI Jakarta Edit_POP'] >= 0.000000 && feature.properties['Batas Desa DKI Jakarta Edit_POP'] <= 10000.000000 ) {
                 return {
-                pane: 'pane_CentralJakarta_24',
+                pane: 'pane_CentralJakarta_12',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -4041,13 +1945,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(250,250,250,0.8509803921568627)',
+                fillColor: 'rgba(250,250,250,0.5019607843137255)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Desa DKI Jakarta Edit_POP'] >= 10001.000000 && feature.properties['Batas Desa DKI Jakarta Edit_POP'] <= 20000.000000 ) {
                 return {
-                pane: 'pane_CentralJakarta_24',
+                pane: 'pane_CentralJakarta_12',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -4056,13 +1960,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(224,223,223,0.8901960784313725)',
+                fillColor: 'rgba(224,223,223,0.6274509803921569)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Desa DKI Jakarta Edit_POP'] >= 20001.000000 && feature.properties['Batas Desa DKI Jakarta Edit_POP'] <= 50000.000000 ) {
                 return {
-                pane: 'pane_CentralJakarta_24',
+                pane: 'pane_CentralJakarta_12',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -4071,13 +1975,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,196,196,0.9254901960784314)',
+                fillColor: 'rgba(197,196,196,0.7529411764705882)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Desa DKI Jakarta Edit_POP'] >= 50001.000000 && feature.properties['Batas Desa DKI Jakarta Edit_POP'] <= 100000.000000 ) {
                 return {
-                pane: 'pane_CentralJakarta_24',
+                pane: 'pane_CentralJakarta_12',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -4086,13 +1990,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(171,170,170,0.9647058823529412)',
+                fillColor: 'rgba(171,170,170,0.8745098039215686)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Desa DKI Jakarta Edit_POP'] >= 100001.000000 && feature.properties['Batas Desa DKI Jakarta Edit_POP'] <= 150000.000000 ) {
                 return {
-                pane: 'pane_CentralJakarta_24',
+                pane: 'pane_CentralJakarta_12',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -4106,195 +2010,21 @@
             }
             }
         }
-        map.createPane('pane_CentralJakarta_24');
-        map.getPane('pane_CentralJakarta_24').style.zIndex = 424;
-        map.getPane('pane_CentralJakarta_24').style['mix-blend-mode'] = 'normal';
-        var layer_CentralJakarta_24 = new L.geoJson(json_CentralJakarta_24, {
+        map.createPane('pane_CentralJakarta_12');
+        map.getPane('pane_CentralJakarta_12').style.zIndex = 412;
+        map.getPane('pane_CentralJakarta_12').style['mix-blend-mode'] = 'normal';
+        var layer_CentralJakarta_12 = new L.geoJson(json_CentralJakarta_12, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_CentralJakarta_24',
-            layerName: 'layer_CentralJakarta_24',
-            pane: 'pane_CentralJakarta_24',
-            onEachFeature: pop_CentralJakarta_24,
-            style: style_CentralJakarta_24_0,
+            dataVar: 'json_CentralJakarta_12',
+            layerName: 'layer_CentralJakarta_12',
+            pane: 'pane_CentralJakarta_12',
+            onEachFeature: pop_CentralJakarta_12,
+            style: style_CentralJakarta_12_0,
         });
-        bounds_group.addLayer(layer_CentralJakarta_24);
-        map.addLayer(layer_CentralJakarta_24);
-        function pop_CentralJakarta_Competitors_25(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">Store</th>\
-                        <td class="visible-with-data" id="Store">' + (feature.properties['Store'] !== null ? autolinker.link(feature.properties['Store'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Grup</th>\
-                        <td class="visible-with-data" id="Grup">' + (feature.properties['Grup'] !== null ? autolinker.link(feature.properties['Grup'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Address.1</th>\
-                        <td class="visible-with-data" id="Address.1">' + (feature.properties['Address.1'] !== null ? autolinker.link(feature.properties['Address.1'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-            var popup = layer.getPopup();
-            var content = popup.getContent();
-            var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
-            popup.setContent(updatedContent);
-        }
-
-        function style_CentralJakarta_Competitors_25_0(feature) {
-            switch(String(feature.properties['Grup.BU'])) {
-                case 'A&W':
-                    return {
-                pane: 'pane_CentralJakarta_Competitors_25',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(89,63,231,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'BK':
-                    return {
-                pane: 'pane_CentralJakarta_Competitors_25',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(28,218,155,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'KFC':
-                    return {
-                pane: 'pane_CentralJakarta_Competitors_25',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(186,64,200,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'McD':
-                    return {
-                pane: 'pane_CentralJakarta_Competitors_25',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(198,216,106,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'PH Restaurant':
-                    return {
-                pane: 'pane_CentralJakarta_Competitors_25',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(120,226,110,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'PHD':
-                    return {
-                pane: 'pane_CentralJakarta_Competitors_25',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(240,102,148,1.0)',
-                interactive: true,
-            }
-                    break;
-                case 'Starbucks':
-                    return {
-                pane: 'pane_CentralJakarta_Competitors_25',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(204,115,52,1.0)',
-                interactive: true,
-            }
-                    break;
-                default:
-                    return {
-                pane: 'pane_CentralJakarta_Competitors_25',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(61,162,235,1.0)',
-                interactive: true,
-            }
-                    break;
-            }
-        }
-        map.createPane('pane_CentralJakarta_Competitors_25');
-        map.getPane('pane_CentralJakarta_Competitors_25').style.zIndex = 425;
-        map.getPane('pane_CentralJakarta_Competitors_25').style['mix-blend-mode'] = 'normal';
-        var layer_CentralJakarta_Competitors_25 = new L.geoJson(json_CentralJakarta_Competitors_25, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_CentralJakarta_Competitors_25',
-            layerName: 'layer_CentralJakarta_Competitors_25',
-            pane: 'pane_CentralJakarta_Competitors_25',
-            onEachFeature: pop_CentralJakarta_Competitors_25,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_CentralJakarta_Competitors_25_0(feature));
-            },
-        });
-        bounds_group.addLayer(layer_CentralJakarta_Competitors_25);
-        map.addLayer(layer_CentralJakarta_Competitors_25);
-        function pop_SouthJakarta_26(feature, layer) {
+        bounds_group.addLayer(layer_CentralJakarta_12);
+        map.addLayer(layer_CentralJakarta_12);
+        function pop_SouthJakarta_13(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['OBJECTID'] !== null ? autolinker.link(feature.properties['OBJECTID'].toLocaleString()) : '') + '</td>\
@@ -4391,10 +2121,10 @@
             popup.setContent(updatedContent);
         }
 
-        function style_SouthJakarta_26_0(feature) {
+        function style_SouthJakarta_13_0(feature) {
             if (feature.properties['Batas Desa DKI Jakarta Edit_POP'] >= 0.000000 && feature.properties['Batas Desa DKI Jakarta Edit_POP'] <= 10000.000000 ) {
                 return {
-                pane: 'pane_SouthJakarta_26',
+                pane: 'pane_SouthJakarta_13',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -4403,13 +2133,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(250,250,250,0.8509803921568627)',
+                fillColor: 'rgba(250,250,250,0.5019607843137255)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Desa DKI Jakarta Edit_POP'] >= 10001.000000 && feature.properties['Batas Desa DKI Jakarta Edit_POP'] <= 20000.000000 ) {
                 return {
-                pane: 'pane_SouthJakarta_26',
+                pane: 'pane_SouthJakarta_13',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -4418,13 +2148,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(224,223,223,0.8901960784313725)',
+                fillColor: 'rgba(224,223,223,0.6274509803921569)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Desa DKI Jakarta Edit_POP'] >= 20001.000000 && feature.properties['Batas Desa DKI Jakarta Edit_POP'] <= 50000.000000 ) {
                 return {
-                pane: 'pane_SouthJakarta_26',
+                pane: 'pane_SouthJakarta_13',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -4433,13 +2163,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,196,196,0.9254901960784314)',
+                fillColor: 'rgba(197,196,196,0.7529411764705882)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Desa DKI Jakarta Edit_POP'] >= 50001.000000 && feature.properties['Batas Desa DKI Jakarta Edit_POP'] <= 100000.000000 ) {
                 return {
-                pane: 'pane_SouthJakarta_26',
+                pane: 'pane_SouthJakarta_13',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -4448,13 +2178,13 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(171,170,170,0.9647058823529412)',
+                fillColor: 'rgba(171,170,170,0.8745098039215686)',
                 interactive: true,
             }
             }
             if (feature.properties['Batas Desa DKI Jakarta Edit_POP'] >= 100001.000000 && feature.properties['Batas Desa DKI Jakarta Edit_POP'] <= 150000.000000 ) {
                 return {
-                pane: 'pane_SouthJakarta_26',
+                pane: 'pane_SouthJakarta_13',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '2.0,1.0',
@@ -4468,21 +2198,21 @@
             }
             }
         }
-        map.createPane('pane_SouthJakarta_26');
-        map.getPane('pane_SouthJakarta_26').style.zIndex = 426;
-        map.getPane('pane_SouthJakarta_26').style['mix-blend-mode'] = 'normal';
-        var layer_SouthJakarta_26 = new L.geoJson(json_SouthJakarta_26, {
+        map.createPane('pane_SouthJakarta_13');
+        map.getPane('pane_SouthJakarta_13').style.zIndex = 413;
+        map.getPane('pane_SouthJakarta_13').style['mix-blend-mode'] = 'normal';
+        var layer_SouthJakarta_13 = new L.geoJson(json_SouthJakarta_13, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_SouthJakarta_26',
-            layerName: 'layer_SouthJakarta_26',
-            pane: 'pane_SouthJakarta_26',
-            onEachFeature: pop_SouthJakarta_26,
-            style: style_SouthJakarta_26_0,
+            dataVar: 'json_SouthJakarta_13',
+            layerName: 'layer_SouthJakarta_13',
+            pane: 'pane_SouthJakarta_13',
+            onEachFeature: pop_SouthJakarta_13,
+            style: style_SouthJakarta_13_0,
         });
-        bounds_group.addLayer(layer_SouthJakarta_26);
-        map.addLayer(layer_SouthJakarta_26);
-        function pop_SouthJakarta_Competitors_27(feature, layer) {
+        bounds_group.addLayer(layer_SouthJakarta_13);
+        map.addLayer(layer_SouthJakarta_13);
+        function pop_JoinedlayerGreaterJakartaOnlyarewithin_final_14(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Store</th>\
@@ -4496,6 +2226,10 @@
                         <th scope="row">Address.1</th>\
                         <td class="visible-with-data" id="Address.1">' + (feature.properties['Address.1'] !== null ? autolinker.link(feature.properties['Address.1'].toLocaleString()) : '') + '</td>\
                     </tr>\
+                    <tr>\
+                        <th scope="row">KOTA/KABUPATEN</th>\
+                        <td class="visible-with-data" id="WADMKK">' + (feature.properties['WADMKK'] !== null ? autolinker.link(feature.properties['WADMKK'].toLocaleString()) : '') + '</td>\
+                    </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
             var popup = layer.getPopup();
@@ -4504,158 +2238,158 @@
             popup.setContent(updatedContent);
         }
 
-        function style_SouthJakarta_Competitors_27_0(feature) {
+        function style_JoinedlayerGreaterJakartaOnlyarewithin_final_14_0(feature) {
             switch(String(feature.properties['Grup.BU'])) {
                 case 'A&W':
                     return {
-                pane: 'pane_SouthJakarta_Competitors_27',
-                radius: 8.0,
+                pane: 'pane_JoinedlayerGreaterJakartaOnlyarewithin_final_14',
+                radius: 6.0,
                 opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
+                color: 'rgba(234,234,234,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 2.0,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(89,63,231,1.0)',
+                fillColor: 'rgba(222,54,90,1.0)',
                 interactive: true,
             }
                     break;
                 case 'BK':
                     return {
-                pane: 'pane_SouthJakarta_Competitors_27',
-                radius: 8.0,
+                pane: 'pane_JoinedlayerGreaterJakartaOnlyarewithin_final_14',
+                radius: 6.0,
                 opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
+                color: 'rgba(234,234,234,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 2.0,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(28,218,155,1.0)',
+                fillColor: 'rgba(111,232,204,1.0)',
                 interactive: true,
             }
                     break;
                 case 'KFC':
                     return {
-                pane: 'pane_SouthJakarta_Competitors_27',
-                radius: 8.0,
+                pane: 'pane_JoinedlayerGreaterJakartaOnlyarewithin_final_14',
+                radius: 6.0,
                 opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
+                color: 'rgba(234,234,234,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 2.0,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(186,64,200,1.0)',
+                fillColor: 'rgba(174,213,75,1.0)',
                 interactive: true,
             }
                     break;
                 case 'McD':
                     return {
-                pane: 'pane_SouthJakarta_Competitors_27',
-                radius: 8.0,
+                pane: 'pane_JoinedlayerGreaterJakartaOnlyarewithin_final_14',
+                radius: 6.0,
                 opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
+                color: 'rgba(234,234,234,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 2.0,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(198,216,106,1.0)',
+                fillColor: 'rgba(212,97,208,1.0)',
                 interactive: true,
             }
                     break;
                 case 'PH Restaurant':
                     return {
-                pane: 'pane_SouthJakarta_Competitors_27',
-                radius: 8.0,
+                pane: 'pane_JoinedlayerGreaterJakartaOnlyarewithin_final_14',
+                radius: 6.0,
                 opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
+                color: 'rgba(234,234,234,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 2.0,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(120,226,110,1.0)',
+                fillColor: 'rgba(81,222,83,1.0)',
                 interactive: true,
             }
                     break;
                 case 'PHD':
                     return {
-                pane: 'pane_SouthJakarta_Competitors_27',
-                radius: 8.0,
+                pane: 'pane_JoinedlayerGreaterJakartaOnlyarewithin_final_14',
+                radius: 6.0,
                 opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
+                color: 'rgba(234,234,234,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 2.0,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(240,102,148,1.0)',
+                fillColor: 'rgba(69,15,207,1.0)',
                 interactive: true,
             }
                     break;
                 case 'Starbucks':
                     return {
-                pane: 'pane_SouthJakarta_Competitors_27',
-                radius: 8.0,
+                pane: 'pane_JoinedlayerGreaterJakartaOnlyarewithin_final_14',
+                radius: 6.0,
                 opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
+                color: 'rgba(234,234,234,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 2.0,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(204,115,52,1.0)',
+                fillColor: 'rgba(206,138,60,1.0)',
                 interactive: true,
             }
                     break;
                 default:
                     return {
-                pane: 'pane_SouthJakarta_Competitors_27',
-                radius: 8.0,
+                pane: 'pane_JoinedlayerGreaterJakartaOnlyarewithin_final_14',
+                radius: 6.0,
                 opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
+                color: 'rgba(234,234,234,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 2.0,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(61,162,235,1.0)',
+                fillColor: 'rgba(49,136,236,1.0)',
                 interactive: true,
             }
                     break;
             }
         }
-        map.createPane('pane_SouthJakarta_Competitors_27');
-        map.getPane('pane_SouthJakarta_Competitors_27').style.zIndex = 427;
-        map.getPane('pane_SouthJakarta_Competitors_27').style['mix-blend-mode'] = 'normal';
-        var layer_SouthJakarta_Competitors_27 = new L.geoJson(json_SouthJakarta_Competitors_27, {
+        map.createPane('pane_JoinedlayerGreaterJakartaOnlyarewithin_final_14');
+        map.getPane('pane_JoinedlayerGreaterJakartaOnlyarewithin_final_14').style.zIndex = 414;
+        map.getPane('pane_JoinedlayerGreaterJakartaOnlyarewithin_final_14').style['mix-blend-mode'] = 'normal';
+        var layer_JoinedlayerGreaterJakartaOnlyarewithin_final_14 = new L.geoJson(json_JoinedlayerGreaterJakartaOnlyarewithin_final_14, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_SouthJakarta_Competitors_27',
-            layerName: 'layer_SouthJakarta_Competitors_27',
-            pane: 'pane_SouthJakarta_Competitors_27',
-            onEachFeature: pop_SouthJakarta_Competitors_27,
+            dataVar: 'json_JoinedlayerGreaterJakartaOnlyarewithin_final_14',
+            layerName: 'layer_JoinedlayerGreaterJakartaOnlyarewithin_final_14',
+            pane: 'pane_JoinedlayerGreaterJakartaOnlyarewithin_final_14',
+            onEachFeature: pop_JoinedlayerGreaterJakartaOnlyarewithin_final_14,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_SouthJakarta_Competitors_27_0(feature));
+                return L.circleMarker(latlng, style_JoinedlayerGreaterJakartaOnlyarewithin_final_14_0(feature));
             },
         });
-        bounds_group.addLayer(layer_SouthJakarta_Competitors_27);
-        map.addLayer(layer_SouthJakarta_Competitors_27);
+        bounds_group.addLayer(layer_JoinedlayerGreaterJakartaOnlyarewithin_final_14);
+        map.addLayer(layer_JoinedlayerGreaterJakartaOnlyarewithin_final_14);
         var osmGeocoder = new L.Control.Geocoder({
             collapsed: true,
             position: 'topleft',
@@ -4668,48 +2402,35 @@
         .title += 'Search for a place';
         var baseMaps = {};
         var overlaysTree = [
-        {label: '<b>Jabodetabek Map</b>', selectAllCheckbox: true, children: [
-            {label: 'South Jakarta_Competitors<br /><table><tr><td style="text-align: center;"><img src="legend/SouthJakarta_Competitors_27_AW0.png" /></td><td>A&W</td></tr><tr><td style="text-align: center;"><img src="legend/SouthJakarta_Competitors_27_BK1.png" /></td><td>BK</td></tr><tr><td style="text-align: center;"><img src="legend/SouthJakarta_Competitors_27_KFC2.png" /></td><td>KFC</td></tr><tr><td style="text-align: center;"><img src="legend/SouthJakarta_Competitors_27_McD3.png" /></td><td>McD</td></tr><tr><td style="text-align: center;"><img src="legend/SouthJakarta_Competitors_27_PHRestaurant4.png" /></td><td>PH Restaurant</td></tr><tr><td style="text-align: center;"><img src="legend/SouthJakarta_Competitors_27_PHD5.png" /></td><td>PHD</td></tr><tr><td style="text-align: center;"><img src="legend/SouthJakarta_Competitors_27_Starbucks6.png" /></td><td>Starbucks</td></tr><tr><td style="text-align: center;"><img src="legend/SouthJakarta_Competitors_27_7.png" /></td><td></td></tr></table>', layer: layer_SouthJakarta_Competitors_27},
-            {label: 'South Jakarta<br /><table><tr><td style="text-align: center;"><img src="legend/SouthJakarta_26_0100000.png" /></td><td>0 - 10000</td></tr><tr><td style="text-align: center;"><img src="legend/SouthJakarta_26_10001200001.png" /></td><td>10001 - 20000</td></tr><tr><td style="text-align: center;"><img src="legend/SouthJakarta_26_20001500002.png" /></td><td>20001 - 50000</td></tr><tr><td style="text-align: center;"><img src="legend/SouthJakarta_26_500011000003.png" /></td><td>50001 - 100000</td></tr><tr><td style="text-align: center;"><img src="legend/SouthJakarta_26_1000011500004.png" /></td><td>100001 - 150000</td></tr></table>', layer: layer_SouthJakarta_26},
-            {label: 'Central Jakarta_Competitors<br /><table><tr><td style="text-align: center;"><img src="legend/CentralJakarta_Competitors_25_AW0.png" /></td><td>A&W</td></tr><tr><td style="text-align: center;"><img src="legend/CentralJakarta_Competitors_25_BK1.png" /></td><td>BK</td></tr><tr><td style="text-align: center;"><img src="legend/CentralJakarta_Competitors_25_KFC2.png" /></td><td>KFC</td></tr><tr><td style="text-align: center;"><img src="legend/CentralJakarta_Competitors_25_McD3.png" /></td><td>McD</td></tr><tr><td style="text-align: center;"><img src="legend/CentralJakarta_Competitors_25_PHRestaurant4.png" /></td><td>PH Restaurant</td></tr><tr><td style="text-align: center;"><img src="legend/CentralJakarta_Competitors_25_PHD5.png" /></td><td>PHD</td></tr><tr><td style="text-align: center;"><img src="legend/CentralJakarta_Competitors_25_Starbucks6.png" /></td><td>Starbucks</td></tr><tr><td style="text-align: center;"><img src="legend/CentralJakarta_Competitors_25_7.png" /></td><td></td></tr></table>', layer: layer_CentralJakarta_Competitors_25},
-            {label: 'Central Jakarta<br /><table><tr><td style="text-align: center;"><img src="legend/CentralJakarta_24_0100000.png" /></td><td>0 - 10000</td></tr><tr><td style="text-align: center;"><img src="legend/CentralJakarta_24_10001200001.png" /></td><td>10001 - 20000</td></tr><tr><td style="text-align: center;"><img src="legend/CentralJakarta_24_20001500002.png" /></td><td>20001 - 50000</td></tr><tr><td style="text-align: center;"><img src="legend/CentralJakarta_24_500011000003.png" /></td><td>50001 - 100000</td></tr><tr><td style="text-align: center;"><img src="legend/CentralJakarta_24_1000011500004.png" /></td><td>100001 - 150000</td></tr></table>', layer: layer_CentralJakarta_24},
-            {label: 'East Jakarta_Competitors<br /><table><tr><td style="text-align: center;"><img src="legend/EastJakarta_Competitors_23_AW0.png" /></td><td>A&W</td></tr><tr><td style="text-align: center;"><img src="legend/EastJakarta_Competitors_23_BK1.png" /></td><td>BK</td></tr><tr><td style="text-align: center;"><img src="legend/EastJakarta_Competitors_23_KFC2.png" /></td><td>KFC</td></tr><tr><td style="text-align: center;"><img src="legend/EastJakarta_Competitors_23_McD3.png" /></td><td>McD</td></tr><tr><td style="text-align: center;"><img src="legend/EastJakarta_Competitors_23_PHRestaurant4.png" /></td><td>PH Restaurant</td></tr><tr><td style="text-align: center;"><img src="legend/EastJakarta_Competitors_23_PHD5.png" /></td><td>PHD</td></tr><tr><td style="text-align: center;"><img src="legend/EastJakarta_Competitors_23_Starbucks6.png" /></td><td>Starbucks</td></tr><tr><td style="text-align: center;"><img src="legend/EastJakarta_Competitors_23_7.png" /></td><td></td></tr></table>', layer: layer_EastJakarta_Competitors_23},
-            {label: 'East Jakarta<br /><table><tr><td style="text-align: center;"><img src="legend/EastJakarta_22_0100000.png" /></td><td>0 - 10000</td></tr><tr><td style="text-align: center;"><img src="legend/EastJakarta_22_10001200001.png" /></td><td>10001 - 20000</td></tr><tr><td style="text-align: center;"><img src="legend/EastJakarta_22_20001500002.png" /></td><td>20001 - 50000</td></tr><tr><td style="text-align: center;"><img src="legend/EastJakarta_22_500011000003.png" /></td><td>50001 - 100000</td></tr><tr><td style="text-align: center;"><img src="legend/EastJakarta_22_1000011500004.png" /></td><td>100001 - 150000</td></tr></table>', layer: layer_EastJakarta_22},
-            {label: 'West Jakarta_Competitors<br /><table><tr><td style="text-align: center;"><img src="legend/WestJakarta_Competitors_21_AW0.png" /></td><td>A&W</td></tr><tr><td style="text-align: center;"><img src="legend/WestJakarta_Competitors_21_BK1.png" /></td><td>BK</td></tr><tr><td style="text-align: center;"><img src="legend/WestJakarta_Competitors_21_KFC2.png" /></td><td>KFC</td></tr><tr><td style="text-align: center;"><img src="legend/WestJakarta_Competitors_21_McD3.png" /></td><td>McD</td></tr><tr><td style="text-align: center;"><img src="legend/WestJakarta_Competitors_21_PHRestaurant4.png" /></td><td>PH Restaurant</td></tr><tr><td style="text-align: center;"><img src="legend/WestJakarta_Competitors_21_PHD5.png" /></td><td>PHD</td></tr><tr><td style="text-align: center;"><img src="legend/WestJakarta_Competitors_21_Starbucks6.png" /></td><td>Starbucks</td></tr><tr><td style="text-align: center;"><img src="legend/WestJakarta_Competitors_21_7.png" /></td><td></td></tr></table>', layer: layer_WestJakarta_Competitors_21},
-            {label: 'West Jakarta<br /><table><tr><td style="text-align: center;"><img src="legend/WestJakarta_20_0100000.png" /></td><td>0 - 10000</td></tr><tr><td style="text-align: center;"><img src="legend/WestJakarta_20_10001200001.png" /></td><td>10001 - 20000</td></tr><tr><td style="text-align: center;"><img src="legend/WestJakarta_20_20001500002.png" /></td><td>20001 - 50000</td></tr><tr><td style="text-align: center;"><img src="legend/WestJakarta_20_500011000003.png" /></td><td>50001 - 100000</td></tr><tr><td style="text-align: center;"><img src="legend/WestJakarta_20_1000011500004.png" /></td><td>100001 - 150000</td></tr></table>', layer: layer_WestJakarta_20},
-            {label: 'North Jakarta_Competitors<br /><table><tr><td style="text-align: center;"><img src="legend/NorthJakarta_Competitors_19_AW0.png" /></td><td>A&W</td></tr><tr><td style="text-align: center;"><img src="legend/NorthJakarta_Competitors_19_BK1.png" /></td><td>BK</td></tr><tr><td style="text-align: center;"><img src="legend/NorthJakarta_Competitors_19_KFC2.png" /></td><td>KFC</td></tr><tr><td style="text-align: center;"><img src="legend/NorthJakarta_Competitors_19_McD3.png" /></td><td>McD</td></tr><tr><td style="text-align: center;"><img src="legend/NorthJakarta_Competitors_19_PHRestaurant4.png" /></td><td>PH Restaurant</td></tr><tr><td style="text-align: center;"><img src="legend/NorthJakarta_Competitors_19_PHD5.png" /></td><td>PHD</td></tr><tr><td style="text-align: center;"><img src="legend/NorthJakarta_Competitors_19_Starbucks6.png" /></td><td>Starbucks</td></tr><tr><td style="text-align: center;"><img src="legend/NorthJakarta_Competitors_19_7.png" /></td><td></td></tr></table>', layer: layer_NorthJakarta_Competitors_19},
-            {label: 'North Jakarta<br /><table><tr><td style="text-align: center;"><img src="legend/NorthJakarta_18_0100000.png" /></td><td>0 - 10000</td></tr><tr><td style="text-align: center;"><img src="legend/NorthJakarta_18_10001200001.png" /></td><td>10001 - 20000</td></tr><tr><td style="text-align: center;"><img src="legend/NorthJakarta_18_20001500002.png" /></td><td>20001 - 50000</td></tr><tr><td style="text-align: center;"><img src="legend/NorthJakarta_18_500011000003.png" /></td><td>50001 - 100000</td></tr><tr><td style="text-align: center;"><img src="legend/NorthJakarta_18_1000011500004.png" /></td><td>100001 - 150000</td></tr></table>', layer: layer_NorthJakarta_18},
-            {label: 'Depok_Competitors<br /><table><tr><td style="text-align: center;"><img src="legend/Depok_Competitors_17_AW0.png" /></td><td>A&W</td></tr><tr><td style="text-align: center;"><img src="legend/Depok_Competitors_17_BK1.png" /></td><td>BK</td></tr><tr><td style="text-align: center;"><img src="legend/Depok_Competitors_17_KFC2.png" /></td><td>KFC</td></tr><tr><td style="text-align: center;"><img src="legend/Depok_Competitors_17_McD3.png" /></td><td>McD</td></tr><tr><td style="text-align: center;"><img src="legend/Depok_Competitors_17_PHRestaurant4.png" /></td><td>PH Restaurant</td></tr><tr><td style="text-align: center;"><img src="legend/Depok_Competitors_17_PHD5.png" /></td><td>PHD</td></tr><tr><td style="text-align: center;"><img src="legend/Depok_Competitors_17_Starbucks6.png" /></td><td>Starbucks</td></tr><tr><td style="text-align: center;"><img src="legend/Depok_Competitors_17_7.png" /></td><td></td></tr></table>', layer: layer_Depok_Competitors_17},
-            {label: '<img src="legend/Depok_16.png" /> Depok', layer: layer_Depok_16},
-            {label: 'Kab. Bogor_Competitors<br /><table><tr><td style="text-align: center;"><img src="legend/KabBogor_Competitors_15_AW0.png" /></td><td>A&W</td></tr><tr><td style="text-align: center;"><img src="legend/KabBogor_Competitors_15_BK1.png" /></td><td>BK</td></tr><tr><td style="text-align: center;"><img src="legend/KabBogor_Competitors_15_KFC2.png" /></td><td>KFC</td></tr><tr><td style="text-align: center;"><img src="legend/KabBogor_Competitors_15_McD3.png" /></td><td>McD</td></tr><tr><td style="text-align: center;"><img src="legend/KabBogor_Competitors_15_PHRestaurant4.png" /></td><td>PH Restaurant</td></tr><tr><td style="text-align: center;"><img src="legend/KabBogor_Competitors_15_PHD5.png" /></td><td>PHD</td></tr><tr><td style="text-align: center;"><img src="legend/KabBogor_Competitors_15_Starbucks6.png" /></td><td>Starbucks</td></tr><tr><td style="text-align: center;"><img src="legend/KabBogor_Competitors_15_7.png" /></td><td></td></tr></table>', layer: layer_KabBogor_Competitors_15},
-            {label: '<img src="legend/BogorRegency_14.png" /> Bogor Regency', layer: layer_BogorRegency_14},
-            {label: 'Bogor_Competitors<br /><table><tr><td style="text-align: center;"><img src="legend/Bogor_Competitors_13_AW0.png" /></td><td>A&W</td></tr><tr><td style="text-align: center;"><img src="legend/Bogor_Competitors_13_BK1.png" /></td><td>BK</td></tr><tr><td style="text-align: center;"><img src="legend/Bogor_Competitors_13_KFC2.png" /></td><td>KFC</td></tr><tr><td style="text-align: center;"><img src="legend/Bogor_Competitors_13_McD3.png" /></td><td>McD</td></tr><tr><td style="text-align: center;"><img src="legend/Bogor_Competitors_13_PHRestaurant4.png" /></td><td>PH Restaurant</td></tr><tr><td style="text-align: center;"><img src="legend/Bogor_Competitors_13_PHD5.png" /></td><td>PHD</td></tr><tr><td style="text-align: center;"><img src="legend/Bogor_Competitors_13_Starbucks6.png" /></td><td>Starbucks</td></tr><tr><td style="text-align: center;"><img src="legend/Bogor_Competitors_13_7.png" /></td><td></td></tr></table>', layer: layer_Bogor_Competitors_13},
-            {label: 'Bogor Map<br /><table><tr><td style="text-align: center;"><img src="legend/BogorMap_12_4413730.png" /></td><td>44 - 1373</td></tr><tr><td style="text-align: center;"><img src="legend/BogorMap_12_137345881.png" /></td><td>1373 - 4588</td></tr><tr><td style="text-align: center;"><img src="legend/BogorMap_12_458872452.png" /></td><td>4588 - 7245</td></tr><tr><td style="text-align: center;"><img src="legend/BogorMap_12_7245103633.png" /></td><td>7245 - 10363</td></tr><tr><td style="text-align: center;"><img src="legend/BogorMap_12_10363138364.png" /></td><td>10363 - 13836</td></tr></table>', layer: layer_BogorMap_12},
-            {label: 'Bekasi_Competitors<br /><table><tr><td style="text-align: center;"><img src="legend/Bekasi_Competitors_11_AW0.png" /></td><td>A&W</td></tr><tr><td style="text-align: center;"><img src="legend/Bekasi_Competitors_11_BK1.png" /></td><td>BK</td></tr><tr><td style="text-align: center;"><img src="legend/Bekasi_Competitors_11_KFC2.png" /></td><td>KFC</td></tr><tr><td style="text-align: center;"><img src="legend/Bekasi_Competitors_11_McD3.png" /></td><td>McD</td></tr><tr><td style="text-align: center;"><img src="legend/Bekasi_Competitors_11_PHRestaurant4.png" /></td><td>PH Restaurant</td></tr><tr><td style="text-align: center;"><img src="legend/Bekasi_Competitors_11_PHD5.png" /></td><td>PHD</td></tr><tr><td style="text-align: center;"><img src="legend/Bekasi_Competitors_11_Starbucks6.png" /></td><td>Starbucks</td></tr><tr><td style="text-align: center;"><img src="legend/Bekasi_Competitors_11_7.png" /></td><td></td></tr></table>', layer: layer_Bekasi_Competitors_11},
-            {label: '<img src="legend/BekasiMap_10.png" /> Bekasi Map', layer: layer_BekasiMap_10},
-            {label: 'Kab. Bekasi_Competitors<br /><table><tr><td style="text-align: center;"><img src="legend/KabBekasi_Competitors_9_AW0.png" /></td><td>A&W</td></tr><tr><td style="text-align: center;"><img src="legend/KabBekasi_Competitors_9_BK1.png" /></td><td>BK</td></tr><tr><td style="text-align: center;"><img src="legend/KabBekasi_Competitors_9_KFC2.png" /></td><td>KFC</td></tr><tr><td style="text-align: center;"><img src="legend/KabBekasi_Competitors_9_McD3.png" /></td><td>McD</td></tr><tr><td style="text-align: center;"><img src="legend/KabBekasi_Competitors_9_PHRestaurant4.png" /></td><td>PH Restaurant</td></tr><tr><td style="text-align: center;"><img src="legend/KabBekasi_Competitors_9_PHD5.png" /></td><td>PHD</td></tr><tr><td style="text-align: center;"><img src="legend/KabBekasi_Competitors_9_Starbucks6.png" /></td><td>Starbucks</td></tr><tr><td style="text-align: center;"><img src="legend/KabBekasi_Competitors_9_7.png" /></td><td></td></tr></table>', layer: layer_KabBekasi_Competitors_9},
-            {label: '<img src="legend/BekasiRegencyMap_8.png" /> Bekasi Regency Map', layer: layer_BekasiRegencyMap_8},
-            {label: 'Kab. Tangerang_Competitors<br /><table><tr><td style="text-align: center;"><img src="legend/KabTangerang_Competitors_7_AW0.png" /></td><td>A&W</td></tr><tr><td style="text-align: center;"><img src="legend/KabTangerang_Competitors_7_BK1.png" /></td><td>BK</td></tr><tr><td style="text-align: center;"><img src="legend/KabTangerang_Competitors_7_KFC2.png" /></td><td>KFC</td></tr><tr><td style="text-align: center;"><img src="legend/KabTangerang_Competitors_7_McD3.png" /></td><td>McD</td></tr><tr><td style="text-align: center;"><img src="legend/KabTangerang_Competitors_7_PHRestaurant4.png" /></td><td>PH Restaurant</td></tr><tr><td style="text-align: center;"><img src="legend/KabTangerang_Competitors_7_PHD5.png" /></td><td>PHD</td></tr><tr><td style="text-align: center;"><img src="legend/KabTangerang_Competitors_7_Starbucks6.png" /></td><td>Starbucks</td></tr><tr><td style="text-align: center;"><img src="legend/KabTangerang_Competitors_7_7.png" /></td><td></td></tr></table>', layer: layer_KabTangerang_Competitors_7},
-            {label: 'Tangerang Regency Map<br /><table><tr><td style="text-align: center;"><img src="legend/TangerangRegencyMap_6_037000.png" /></td><td>0 - 3700</td></tr><tr><td style="text-align: center;"><img src="legend/TangerangRegencyMap_6_3700108041.png" /></td><td>3700 - 10804</td></tr><tr><td style="text-align: center;"><img src="legend/TangerangRegencyMap_6_10804201482.png" /></td><td>10804 - 20148</td></tr><tr><td style="text-align: center;"><img src="legend/TangerangRegencyMap_6_20148354553.png" /></td><td>20148 - 35455</td></tr><tr><td style="text-align: center;"><img src="legend/TangerangRegencyMap_6_35455671004.png" /></td><td>35455 - 67100</td></tr></table>', layer: layer_TangerangRegencyMap_6},
-            {label: 'Tangerang Selatan_Competitors<br /><table><tr><td style="text-align: center;"><img src="legend/TangerangSelatan_Competitors_5_AW0.png" /></td><td>A&W</td></tr><tr><td style="text-align: center;"><img src="legend/TangerangSelatan_Competitors_5_BK1.png" /></td><td>BK</td></tr><tr><td style="text-align: center;"><img src="legend/TangerangSelatan_Competitors_5_KFC2.png" /></td><td>KFC</td></tr><tr><td style="text-align: center;"><img src="legend/TangerangSelatan_Competitors_5_McD3.png" /></td><td>McD</td></tr><tr><td style="text-align: center;"><img src="legend/TangerangSelatan_Competitors_5_PHRestaurant4.png" /></td><td>PH Restaurant</td></tr><tr><td style="text-align: center;"><img src="legend/TangerangSelatan_Competitors_5_PHD5.png" /></td><td>PHD</td></tr><tr><td style="text-align: center;"><img src="legend/TangerangSelatan_Competitors_5_Starbucks6.png" /></td><td>Starbucks</td></tr><tr><td style="text-align: center;"><img src="legend/TangerangSelatan_Competitors_5_7.png" /></td><td></td></tr></table>', layer: layer_TangerangSelatan_Competitors_5},
-            {label: 'Tangsel Map<br /><table><tr><td style="text-align: center;"><img src="legend/TangselMap_4_7777153870.png" /></td><td>7777 - 15387</td></tr><tr><td style="text-align: center;"><img src="legend/TangselMap_4_15387235471.png" /></td><td>15387 - 23547</td></tr><tr><td style="text-align: center;"><img src="legend/TangselMap_4_23547319872.png" /></td><td>23547 - 31987</td></tr><tr><td style="text-align: center;"><img src="legend/TangselMap_4_31987429963.png" /></td><td>31987 - 42996</td></tr><tr><td style="text-align: center;"><img src="legend/TangselMap_4_42996526944.png" /></td><td>42996 - 52694</td></tr></table>', layer: layer_TangselMap_4},
-            {label: 'Tangerang_Competitors<br /><table><tr><td style="text-align: center;"><img src="legend/Tangerang_Competitors_3_AW0.png" /></td><td>A&W</td></tr><tr><td style="text-align: center;"><img src="legend/Tangerang_Competitors_3_BK1.png" /></td><td>BK</td></tr><tr><td style="text-align: center;"><img src="legend/Tangerang_Competitors_3_KFC2.png" /></td><td>KFC</td></tr><tr><td style="text-align: center;"><img src="legend/Tangerang_Competitors_3_McD3.png" /></td><td>McD</td></tr><tr><td style="text-align: center;"><img src="legend/Tangerang_Competitors_3_PHRestaurant4.png" /></td><td>PH Restaurant</td></tr><tr><td style="text-align: center;"><img src="legend/Tangerang_Competitors_3_PHD5.png" /></td><td>PHD</td></tr><tr><td style="text-align: center;"><img src="legend/Tangerang_Competitors_3_Starbucks6.png" /></td><td>Starbucks</td></tr><tr><td style="text-align: center;"><img src="legend/Tangerang_Competitors_3_7.png" /></td><td></td></tr></table>', layer: layer_Tangerang_Competitors_3},
-            {label: '<img src="legend/TangerangMap_2.png" /> Tangerang Map', layer: layer_TangerangMap_2},]},
-            {label: 'Competitors (National)<br /><table><tr><td style="text-align: center;"><img src="legend/CompetitorsNational_1_AW0.png" /></td><td>A&W</td></tr><tr><td style="text-align: center;"><img src="legend/CompetitorsNational_1_BK1.png" /></td><td>BK</td></tr><tr><td style="text-align: center;"><img src="legend/CompetitorsNational_1_KFC2.png" /></td><td>KFC</td></tr><tr><td style="text-align: center;"><img src="legend/CompetitorsNational_1_McD3.png" /></td><td>McD</td></tr><tr><td style="text-align: center;"><img src="legend/CompetitorsNational_1_PHRestaurant4.png" /></td><td>PH Restaurant</td></tr><tr><td style="text-align: center;"><img src="legend/CompetitorsNational_1_PHD5.png" /></td><td>PHD</td></tr><tr><td style="text-align: center;"><img src="legend/CompetitorsNational_1_Starbucks6.png" /></td><td>Starbucks</td></tr><tr><td style="text-align: center;"><img src="legend/CompetitorsNational_1_7.png" /></td><td></td></tr></table>', layer: layer_CompetitorsNational_1},
-            {label: "Google Maps", layer: layer_GoogleMaps_0},]
+            {label: 'Fast Food Restaurant<br /><table><tr><td style="text-align: center;"><img src="legend/JoinedlayerGreaterJakartaOnlyarewithin_final_14_AW0.png" /></td><td>A&W</td></tr><tr><td style="text-align: center;"><img src="legend/JoinedlayerGreaterJakartaOnlyarewithin_final_14_BK1.png" /></td><td>BK</td></tr><tr><td style="text-align: center;"><img src="legend/JoinedlayerGreaterJakartaOnlyarewithin_final_14_KFC2.png" /></td><td>KFC</td></tr><tr><td style="text-align: center;"><img src="legend/JoinedlayerGreaterJakartaOnlyarewithin_final_14_McD3.png" /></td><td>McD</td></tr><tr><td style="text-align: center;"><img src="legend/JoinedlayerGreaterJakartaOnlyarewithin_final_14_PHRestaurant4.png" /></td><td>PH Restaurant</td></tr><tr><td style="text-align: center;"><img src="legend/JoinedlayerGreaterJakartaOnlyarewithin_final_14_PHD5.png" /></td><td>PHD</td></tr><tr><td style="text-align: center;"><img src="legend/JoinedlayerGreaterJakartaOnlyarewithin_final_14_Starbucks6.png" /></td><td>Starbucks</td></tr><tr><td style="text-align: center;"><img src="legend/JoinedlayerGreaterJakartaOnlyarewithin_final_14_7.png"', layer: layer_JoinedlayerGreaterJakartaOnlyarewithin_final_14},
+        {label: '<b>Jabodetabek Population Map</b>', selectAllCheckbox: true, children: [
+            {label: 'South Jakarta<br /><table><tr><td style="text-align: center;"', layer: layer_SouthJakarta_13},
+            {label: 'Central Jakarta<br/><table><tr><td style="text-align: center;"', layer: layer_CentralJakarta_12},
+            {label: 'East Jakarta<br /><table><tr><td style="text-align: center;"', layer: layer_EastJakarta_11},
+            {label: 'West Jakarta<br /><table><tr><td style="text-align: center;"', layer: layer_WestJakarta_10},
+            {label: 'North Jakarta<br /><table><tr><td style="text-align: center;"', layer: layer_NorthJakarta_9},
+            {label: 'Bogor Regency', layer: layer_BogorRegency_7},
+            {label: 'Bogor<br /><table><tr><td style="text-align: center;"', layer: layer_BogorMap_6},
+            {label: 'Depok', layer: layer_Depok_8},
+            {label: 'Tangerang Regency<br /><table><tr><td style="text-align: center;"', layer: layer_TangerangRegencyMap_3},
+            {label: 'Tangerang Selatan<br /><table><tr><td style="text-align: center;"', layer: layer_TangselMap_2},
+            {label: 'Tangerang', layer: layer_TangerangMap_1},
+            {label: 'Bekasi', layer: layer_BekasiMap_5},
+            {label: 'Bekasi Regency', layer: layer_BekasiRegencyMap_4},]},
+            {label: "Google Maps - BaseMap", layer: layer_GoogleMaps_0},]
         var lay = L.control.layers.tree(null, overlaysTree,{
             //namedToggle: true,
             //selectorBack: false,
             //closedSymbol: '&#8862; &#x1f5c0;',
             //openedSymbol: '&#8863; &#x1f5c1;',
-            //collapseAll: 'Collapse all',
-            //expandAll: 'Expand all',
-            collapsed: false, 
+            collapseAll: 'Collapse all',
+            expandAll: 'Expand all',
+            collapse: true,
         });
         lay.addTo(map);
         setBounds();
         map.addControl(new L.Control.Search({
-            layer: layer_CompetitorsNational_1,
+            layer: layer_JoinedlayerGreaterJakartaOnlyarewithin_final_14,
             initial: false,
             hideMarkerOnCollapse: true,
             propertyName: 'Store'}));
@@ -4734,7 +2455,7 @@
         document.getElementById("all").appendChild(col1);
         document.getElementById("all").appendChild(col2);
         col1.appendChild(mapDiv)
-        var Filters = {"Grup": "str"};
+        var Filters = {"WADMKK": "str","Grup": "str"};
         function filterFunc() {
           map.eachLayer(function(lyr){
           if ("options" in lyr && "dataVar" in lyr["options"]){
@@ -4826,13 +2547,55 @@
         }
             document.getElementById("menu").appendChild(
                 document.createElement("div"));
+            var div_WADMKK = document.createElement('div');
+            div_WADMKK.id = "div_WADMKK";
+            div_WADMKK.className= "filterselect";
+            document.getElementById("menu").appendChild(div_WADMKK);
+            sel_WADMKK = document.createElement('select');
+            sel_WADMKK.multiple = true;
+            sel_WADMKK.size = 15;
+            sel_WADMKK.id = "sel_WADMKK";
+            var WADMKK_options_str = "<option value='' unselected></option>";
+            sel_WADMKK.onchange = function(){filterFunc()};
+            WADMKK_options_str  += '<option value="Bekasi">Bekasi</option>';
+            WADMKK_options_str  += '<option value="Bogor">Bogor</option>';
+            WADMKK_options_str  += '<option value="Kota Adm. Jakarta Barat">Kota Adm. Jakarta Barat</option>';
+            WADMKK_options_str  += '<option value="Kota Adm. Jakarta Pusat">Kota Adm. Jakarta Pusat</option>';
+            WADMKK_options_str  += '<option value="Kota Adm. Jakarta Selatan">Kota Adm. Jakarta Selatan</option>';
+            WADMKK_options_str  += '<option value="Kota Adm. Jakarta Timur">Kota Adm. Jakarta Timur</option>';
+            WADMKK_options_str  += '<option value="Kota Adm. Jakarta Utara">Kota Adm. Jakarta Utara</option>';
+            WADMKK_options_str  += '<option value="Kota Bekasi">Kota Bekasi</option>';
+            WADMKK_options_str  += '<option value="Kota Bogor">Kota Bogor</option>';
+            WADMKK_options_str  += '<option value="Kota Depok">Kota Depok</option>';
+            WADMKK_options_str  += '<option value="Kota Tangerang">Kota Tangerang</option>';
+            WADMKK_options_str  += '<option value="Kota Tangerang Selatan">Kota Tangerang Selatan</option>';
+            WADMKK_options_str  += '<option value="Tangerang">Tangerang</option>';
+            sel_WADMKK.innerHTML = WADMKK_options_str;
+            div_WADMKK.appendChild(sel_WADMKK);
+            var lab_WADMKK = document.createElement('div');
+            lab_WADMKK.innerHTML = 'FILTER KOTA/KAB.';
+            lab_WADMKK.className = 'filterlabel';
+            div_WADMKK.appendChild(lab_WADMKK);
+            var reset_WADMKK = document.createElement('div');
+            reset_WADMKK.innerHTML = 'clear filter';
+            reset_WADMKK.className = 'filterlabel';
+            reset_WADMKK.onclick = function() {
+                var options = document.getElementById("sel_WADMKK").options;
+                for (var i=0; i < options.length; i++) {
+                    options[i].selected = false;
+                }
+                filterFunc();
+            };
+            div_WADMKK.appendChild(reset_WADMKK);
+            document.getElementById("menu").appendChild(
+                document.createElement("div"));
             var div_Grup = document.createElement('div');
             div_Grup.id = "div_Grup";
             div_Grup.className= "filterselect";
             document.getElementById("menu").appendChild(div_Grup);
             sel_Grup = document.createElement('select');
             sel_Grup.multiple = true;
-            sel_Grup.size = 6;
+            sel_Grup.size = 7;
             sel_Grup.id = "sel_Grup";
             var Grup_options_str = "<option value='' unselected></option>";
             sel_Grup.onchange = function(){filterFunc()};
@@ -4845,7 +2608,7 @@
             sel_Grup.innerHTML = Grup_options_str;
             div_Grup.appendChild(sel_Grup);
             var lab_Grup = document.createElement('div');
-            lab_Grup.innerHTML = 'Grup';
+            lab_Grup.innerHTML = 'FILTER RESTAURANT BRANDS';
             lab_Grup.className = 'filterlabel';
             div_Grup.appendChild(lab_Grup);
             var reset_Grup = document.createElement('div');
