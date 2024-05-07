@@ -2608,7 +2608,7 @@
             sel_Grup.innerHTML = Grup_options_str;
             div_Grup.appendChild(sel_Grup);
             var lab_Grup = document.createElement('div');
-            lab_Grup.innerHTML = 'Grup';
+            lab_Grup.innerHTML = 'FILTER RESTAURANT BRANDS';
             lab_Grup.className = 'filterlabel';
             div_Grup.appendChild(lab_Grup);
             var reset_Grup = document.createElement('div');
